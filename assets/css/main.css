@@ -577,7 +577,6 @@ a {
 }
 .blue_button a,
 .blue_button button {
-  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
@@ -587,8 +586,7 @@ a {
   font-weight: 700;
   line-height: 30px;
   padding: 21px 0;
-  max-width: 302px;
-  width: 100%;
+  width: 302px;
   display: inline-block;
   border: 2px solid transparent;
   transition: all ease-in 0.2s;

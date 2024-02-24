@@ -555,7 +555,7 @@ a {
   margin: auto;
   left: 0;
   z-index: 2;
-  width: 50%;
+  width: calc(41% - 55px);
   height: 1px;
   background-color: rgb(12, 26, 55);
 }
@@ -567,7 +567,7 @@ a {
   margin: auto;
   right: 0;
   z-index: 2;
-  width: 40%;
+  width: calc(41% - 55px);
   height: 1px;
   background-color: rgb(12, 26, 55);
 }
@@ -618,6 +618,9 @@ a {
 @media (max-width: 1480px) {
   .container {
     max-width: 1140px;
+  }
+  header .header_row {
+    gap: 80px;
   }
 }
 @media (max-width: 1200px) {

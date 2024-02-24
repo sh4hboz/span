@@ -10,13 +10,57 @@
 	}
 	header{
 		.header_row{
-			gap: 80px;
+			gap: 60px;
+			.brand_logo{
+				img{
+					width: 171px;
+    				height: 30px;
+				}
+			}
+		}
+		.header_middle{
+			gap: 15px;
+			.menus{
+				gap: 30px;
+			}
+		}
+		.header_right{
+			.to_tel{
+				font-size: 26px;
+			}
 		}
 	}
 }
 @media (max-width: 1200px) {
 	.container {
 		max-width: 960px;
+	}
+	header{
+		.header_row{
+			gap: 40px;
+			.brand_logo{
+				img{
+					width: 120px;
+				}
+			}
+			padding: 20px 0;
+		}
+		.header_middle{
+			.menus{
+				gap: 20px;
+			}
+		}
+		.header_right{
+			.to_tel{
+				gap: 13px;
+				font-size: 20px;
+			}
+			.blue_button{
+				a{
+					font-size: 19px;
+				}
+			}
+		}
 	}
 }
 @media (max-width: 992px) {

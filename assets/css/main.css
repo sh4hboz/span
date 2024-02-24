@@ -620,12 +620,42 @@ a {
     max-width: 1140px;
   }
   header .header_row {
-    gap: 80px;
+    gap: 60px;
+  }
+  header .header_row .brand_logo img {
+    width: 171px;
+    height: 30px;
+  }
+  header .header_middle {
+    gap: 15px;
+  }
+  header .header_middle .menus {
+    gap: 30px;
+  }
+  header .header_right .to_tel {
+    font-size: 26px;
   }
 }
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  header .header_row {
+    gap: 40px;
+    padding: 20px 0;
+  }
+  header .header_row .brand_logo img {
+    width: 120px;
+  }
+  header .header_middle .menus {
+    gap: 20px;
+  }
+  header .header_right .to_tel {
+    gap: 13px;
+    font-size: 20px;
+  }
+  header .header_right .blue_button a {
+    font-size: 19px;
   }
 }
 @media (max-width: 992px) {

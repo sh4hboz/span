@@ -162,6 +162,7 @@ header {
 	}
 	.catalog_swiper {
 		padding-bottom: 30px;
+		// padding: 0 10px 30px 10px;
 	}
 	.swiper_item {
 		border-radius: 10px;
@@ -170,7 +171,7 @@ header {
 		height: 498px;
 		transition: all ease-in 0.2s;
 		&:hover {
-			box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.393);
+			box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.192);
 		}
 	}
 	.swiper_offer_prev {
@@ -258,7 +259,7 @@ header {
 	background-size: cover;
 	padding-bottom: 90px;
 	#title {
-		transform: translate(0, -35px);
+		transform: translate(0, -4px);
 	}
 	.company_top {
 		display: flex;

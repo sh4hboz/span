@@ -166,7 +166,7 @@ header .header_right .blue_button a {
   transition: all ease-in 0.2s;
 }
 .catalog .swiper_item:hover {
-  box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.393);
+  box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.192);
 }
 .catalog .swiper_offer_prev {
   position: absolute;
@@ -251,7 +251,7 @@ header .header_right .blue_button a {
   padding-bottom: 90px;
 }
 .company #title {
-  transform: translate(0, -35px);
+  transform: translate(0, -4px);
 }
 .company .company_top {
   display: flex;
@@ -572,40 +572,22 @@ a {
 
 #title {
   position: relative;
-  z-index: 0;
+  top: -17px;
+  width: 100%;
+  text-wrap: nowrap;
+  font-size: 30px;
   text-align: center;
-  color: rgb(12, 26, 55);
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 68px;
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+  align-items: center;
 }
-#title span {
-  padding: 0 55px;
-  position: relative;
-  z-index: 123;
-}
-#title::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  margin: auto;
-  left: 0;
-  z-index: 2;
-  width: calc(41% - 55px);
-  height: 1px;
-  background-color: rgb(12, 26, 55);
-}
+
+#title::after,
 #title::before {
   content: "";
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  margin: auto;
-  right: 0;
-  z-index: 2;
-  width: calc(41% - 55px);
-  height: 1px;
+  width: 100%;
+  height: 3px;
   background-color: rgb(12, 26, 55);
 }
 

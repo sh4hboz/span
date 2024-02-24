@@ -1,15 +1,13 @@
-h1,
-* {
+h1,* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 .wrapper {
     overflow: hidden;
 }
-
 body {
+    font-family: OpenSans;
     background-color: red;
     color: #FFF;
 }

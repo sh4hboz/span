@@ -24,7 +24,11 @@ a {
 	font-size: 50px;
 	font-weight: 700;
 	line-height: 68px;
-	padding: 0 55px;
+	span {
+		padding: 0 55px;
+		position: relative;
+		z-index: 123;
+	}
 	&::after {
 		content: "";
 		position: absolute;
@@ -33,7 +37,7 @@ a {
 		margin: auto;
 		left: 0;
 		z-index: 2;
-		width: 40%;
+		width: 50%;
 		height: 1px;
 		background-color: rgb(12, 26, 55);
 	}
@@ -50,12 +54,28 @@ a {
 		background-color: rgb(12, 26, 55);
 	}
 }
+// .titles_block {
+// 	position: relative;
+// 	border-bottom: 1px solid rgb(12, 26, 55);
+// 	.titles {
+// 		color: rgb(12, 26, 55);
+// 		font-size: 50px;
+// 		font-weight: 700;
+// 		line-height: 68px;
+// 		padding: 0 55px;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 50%;
+// 		transform: translate(-50%, -50%);
+// 	}
+// }
 
 // blue button
 
 .blue_button {
 	text-align: center;
-	a {
+	a,
+	button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -71,6 +91,7 @@ a {
 		display: inline-block;
 		border: 2px solid transparent;
 		transition: all ease-in 0.2s;
+		cursor: pointer;
 		&:hover {
 			color: rgb(12, 26, 55);
 			border: 2px solid rgb(12, 26, 55);

@@ -1,19 +1,10 @@
 .container {
-	max-width: 1620px;
+	max-width: 1415px;
 	margin: 0 auto;
 	padding: 0;
 }
-@media (max-width: 1920px) {
-	.container {
-		max-width: 1620px;
-	}
-}
-@media (max-width: 1600px) {
-	.container {
-		max-width: 1320px;
-	}
-}
-@media (max-width: 1400px) {
+
+@media (max-width: 1480px) {
 	.container {
 		max-width: 1140px;
 	}

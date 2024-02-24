@@ -11,15 +11,20 @@ body {
 }
 
 // main title with border
-.title {
+.menu_name {
+	position: relative;
+	border-top: 1px solid rgb(12, 26, 55);
+}
+#title {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	text-align: center;
 	color: rgb(12, 26, 55);
 	font-size: 50px;
 	font-weight: 700;
 	line-height: 68px;
-	position: relative;
-	z-index: 3;
-	&::before {
-		content: "";
-	}
+	padding: 0 55px;
+	background-color: #b8cedb;
 }

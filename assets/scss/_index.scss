@@ -86,3 +86,60 @@ header{
 		letter-spacing: 0%;
 	}
 }
+
+// company
+.company {
+	background: url(../images/company_bg.png) no-repeat;
+	background-size: cover;
+	padding-bottom: 90px;
+	#title {
+		transform: translate(0, -35px);
+	}
+	.company_top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 40px;
+	}
+	.blue_button#left_side {
+		display: inline-block;
+	}
+	.company_count {
+		color: rgb(12, 26, 55);
+		font-size: 80px;
+		font-weight: 600;
+		line-height: 109px;
+		letter-spacing: 0%;
+	}
+	.company_count_title {
+		color: rgb(12, 26, 55);
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 41px;
+		letter-spacing: 0%;
+		margin-top: -5px;
+	}
+	.company_block {
+		display: flex;
+		gap: 65px;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.company_left {
+		flex: 0 0 auto;
+		width: 45.3%;
+	}
+	.company_desc {
+		color: rgb(12, 26, 55);
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 27px;
+		letter-spacing: 0%;
+		margin-bottom: 60px;
+	}
+	.company_right_images {
+		display: flex;
+		gap: 15px 24px;
+		flex-wrap: wrap;
+	}
+}

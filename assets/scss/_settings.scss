@@ -68,7 +68,8 @@ a {
 		font-weight: 700;
 		line-height: 30px;
 		padding: 21px 0;
-		width: 302px;
+		max-width: 302px;
+		width: 100%;
 		display: inline-block;
 		border: 2px solid transparent;
 		transition: all ease-in 0.2s;

@@ -1,8 +1,14 @@
-h1,*{
+h1,
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-.wrapper{
+
+.wrapper {
     overflow: hidden;
+}
+
+body {
+    background-color: red;
 }

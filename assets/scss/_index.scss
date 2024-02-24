@@ -48,7 +48,7 @@ header {
 				flex-direction: column;
 				position: absolute;
 				left: 0;
-				top: calc(100% + 11px);
+				top: calc(100% + 9px);
 				opacity: 0;
 				visibility: hidden;
 				transform: translateY(20px);
@@ -185,6 +185,7 @@ header {
 		top: 48%;
 	}
 	.swiper_img {
+		user-select: none;
 		margin-bottom: 75px;
 		img {
 			max-width: 307px;
@@ -199,6 +200,7 @@ header {
 		font-weight: 600;
 		line-height: 33px;
 		text-align: center;
+		user-select: none;
 	}
 }
 

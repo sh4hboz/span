@@ -48,7 +48,7 @@ header .header_middle .menus li.has_submenu .submenu {
   flex-direction: column;
   position: absolute;
   left: 0;
-  top: calc(100% + 11px);
+  top: calc(100% + 9px);
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -179,6 +179,9 @@ header .header_right .blue_button a {
   top: 48%;
 }
 .catalog .swiper_img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   margin-bottom: 75px;
 }
 .catalog .swiper_img img {
@@ -195,6 +198,9 @@ header .header_right .blue_button a {
   font-weight: 600;
   line-height: 33px;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .news {

@@ -147,6 +147,56 @@ header .header_right .blue_button a {
   padding: 15.5px 0;
 }
 
+.catalog {
+  background-color: #b8cedb;
+  padding-bottom: 100px;
+}
+.catalog .catalog_block {
+  padding-top: 55px;
+  position: relative;
+}
+.catalog .catalog_swiper {
+  padding-bottom: 30px;
+}
+.catalog .swiper_item {
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  padding: 15px 15px 30px 15px;
+  height: 498px;
+  transition: all ease-in 0.2s;
+}
+.catalog .swiper_item:hover {
+  box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.393);
+}
+.catalog .swiper_offer_prev {
+  position: absolute;
+  top: 48%;
+  left: -50px;
+}
+.catalog .swiper_offer_next {
+  right: -50px;
+  position: absolute;
+  top: 48%;
+}
+.catalog .swiper_img {
+  margin-bottom: 75px;
+}
+.catalog .swiper_img img {
+  max-width: 307px;
+  max-height: 307px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.catalog .catalog_desc {
+  color: rgb(12, 26, 55);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 33px;
+  text-align: center;
+}
+
 .news {
   background-color: #b8cedb;
 }
@@ -261,19 +311,6 @@ header .header_right .blue_button a {
 }
 .special_offers .offer_swiper {
   padding-bottom: 130px;
-}
-.special_offers .swiper_offer_nav i {
-  border-radius: 6px;
-  background: transparent;
-  padding: 8px 10px 8px 10px;
-  color: rgb(12, 26, 55);
-  font-size: 33px;
-  cursor: pointer;
-  transition: all ease-in 0.2s;
-}
-.special_offers .swiper_offer_nav i:hover {
-  background: rgb(12, 26, 55);
-  color: #fff;
 }
 .special_offers .swiper_offer_prev {
   position: absolute;
@@ -605,6 +642,20 @@ a {
 
 .section_padding {
   padding-bottom: 130px;
+}
+
+.swiper_offer_nav i {
+  border-radius: 6px;
+  background: transparent;
+  padding: 8px 10px 8px 10px;
+  color: rgb(12, 26, 55);
+  font-size: 33px;
+  cursor: pointer;
+  transition: all ease-in 0.2s;
+}
+.swiper_offer_nav i:hover {
+  background: rgb(12, 26, 55);
+  color: #fff;
 }
 
 .container {

@@ -105,3 +105,20 @@ a {
 .section_padding {
 	padding-bottom: 130px;
 }
+
+// swiper nav
+.swiper_offer_nav {
+	i {
+		border-radius: 6px;
+		background: transparent;
+		padding: 8px 10px 8px 10px;
+		color: rgb(12, 26, 55);
+		font-size: 33px;
+		cursor: pointer;
+		transition: all ease-in 0.2s;
+		&:hover {
+			background: rgb(12, 26, 55);
+			color: #fff;
+		}
+	}
+}

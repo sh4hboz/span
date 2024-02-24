@@ -4,8 +4,22 @@
 	box-sizing: border-box;
 }
 body {
-	// font-family: "TT Travels";
+	font-family: "Open Sans", sans-serif;
 }
 .wrapper {
 	overflow: hidden;
+}
+
+// main title with border
+.title {
+	text-align: center;
+	color: rgb(12, 26, 55);
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 68px;
+	position: relative;
+	z-index: 3;
+	&::before {
+		content: "";
+	}
 }

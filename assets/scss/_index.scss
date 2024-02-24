@@ -1,19 +1,27 @@
 // news section
 .news {
 	background-color: #b8cedb;
+	#title {
+		margin-bottom: 55px;
+	}
 	.news_block {
-		padding-top: 60px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 24px 0;
+		margin-bottom: 40px;
 	}
 	.news_item {
 		flex: 0 0 auto;
 		width: calc(50% - 12px);
 		border-radius: 10px;
 		background-color: #fff;
+		transition: all ease-in 0.2s;
+		&:hover {
+			cursor: pointer;
+			box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.393);
+		}
 	}
 	.news_item_img {
 		img {

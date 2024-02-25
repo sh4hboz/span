@@ -1,30 +1,30 @@
 // HEADER
-header{
+header {
 	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.08);
 	background-color: rgb(184, 206, 219);
-	.header_row{
+	.header_row {
 		padding: 39px 0 27px 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 122px;
-		.brand_logo{
-			img{
+		.brand_logo {
+			img {
 				width: 182px;
 				height: 49px;
 			}
 		}
 	}
-	.header_middle{
+	.header_middle {
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
-		.menus{
+		.menus {
 			display: flex;
 			align-items: center;
 			gap: 57px;
 			transition: .3s all ease-out;
-			li{
+			li {
 				font-size: 20px;
 				font-weight: 400;
 				line-height: 27px;
@@ -39,13 +39,13 @@ header{
 				transition: .3s all ease-out;
 				
 			}
-			li:hover{
+			li:hover {
 				-webkit-text-stroke: 1px rgb(12, 26, 55);
 			}
-			li.has_submenu{
+			li.has_submenu {
 				border-bottom: 3px solid transparent;
 			}
-			li.has_submenu .submenu{
+			li.has_submenu .submenu {
 				display: flex;
 				flex-direction: column;
 				position: absolute;
@@ -57,50 +57,50 @@ header{
 				z-index: 2;
 				background: rgb(250, 250, 250);
 				min-width: 416px;
-				transition: .3s all ease-out;
+				transition: 0.3s all ease-out;
 				border-top: 6px solid transparent;
 			}
-			li.has_submenu:hover{
+			li.has_submenu:hover {
 				border-color: rgb(12, 26, 55);
 			}
-			li.has_submenu:hover .submenu{
+			li.has_submenu:hover .submenu {
 				opacity: 1;
 				visibility: visible;
 				transform: translateY(0);
 				border-color: rgb(12, 26, 55);
 			}
-			li.has_submenu .submenu li{
+			li.has_submenu .submenu li {
 				height: 66px;
 				padding: 8px 16px 8px 16px;
 				border-top: 1px solid rgb(141, 161, 178);
 			}
-			li.has_submenu .submenu li:first-child{
+			li.has_submenu .submenu li:first-child {
 				border: none;
 			}
-			li.has_submenu .submenu li:hover{
+			li.has_submenu .submenu li:hover {
 				background: rgb(184, 206, 219);
 			}
-			li.has_submenu .submenu li:hover .inner_submenu{
+			li.has_submenu .submenu li:hover .inner_submenu {
 				opacity: 1;
 				visibility: visible;
 				right: 0;
 			}
-			li.has_submenu .inner_submenu{
+			li.has_submenu .inner_submenu {
 				position: absolute;
 				visibility: hidden;
 				opacity: 0;
 				right: -10px;
 				transform: translate(100%, 0);
 				top: 0;
-				transition: .3s all ease-out;
+				transition: 0.3s all ease-out;
 				background: rgb(250, 250, 250);
 			}
-			a{
+			a {
 				text-decoration: none;
 				color: rgb(12, 26, 55);
-				transition: .3s all ease-out;
+				transition: 0.3s all ease-out;
 				text-wrap: nowrap;
-				:hover{
+				:hover {
 					-webkit-text-stroke: 1px rgb(12, 26, 55);
 				}
 			}
@@ -108,13 +108,13 @@ header{
 				display: none;
 			}
 		}
-		ul{
+		ul {
 			list-style: none;
 		}
 	}
-	.search_wrap{
+	.search_wrap {
 		position: relative;
-		input{
+		input {
 			width: 100%;
 			max-width: 100%;
 			border-radius: 15px;
@@ -129,18 +129,18 @@ header{
 			border: none;
 			outline: none;
 		}
-		img{
+		img {
 			position: absolute;
 			left: 20px;
 			top: 50%;
 			transform: translate(0, -50%);
 		}
 	}
-	.header_right{
+	.header_right {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		.to_tel{
+		.to_tel {
 			display: flex;
 			align-items: center;
 			gap: 16px;
@@ -149,8 +149,8 @@ header{
 			line-height: 41px;
 			color: rgb(12, 26, 55);
 		}
-		.blue_button{
-			a{
+		.blue_button {
+			a {
 				padding: 15.5px 0;
 			}
 		}
@@ -214,11 +214,68 @@ header{
 		cursor: auto;
 	}
 }
+
+// catalog section
+.catalog {
+	background-color: #b8cedb;
+	.catalog_block {
+		padding-top: 55px;
+		position: relative;
+		margin-bottom: 20px;
+	}
+	.catalog_swiper {
+		padding-bottom: 30px;
+		// padding: 0 10px 30px 10px;
+	}
+	.swiper_item {
+		border-radius: 10px;
+		background: rgb(255, 255, 255);
+		padding: 15px 15px 30px 15px;
+		height: 498px;
+		transition: all ease-in 0.2s;
+		&:hover {
+			box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.192);
+		}
+	}
+	.swiper_offer_prev {
+		position: absolute;
+		top: 48%;
+		left: -50px;
+	}
+	.swiper_offer_next {
+		right: -50px;
+		position: absolute;
+		top: 48%;
+	}
+	.swiper_img {
+		user-select: none;
+		margin-bottom: 75px;
+		img {
+			max-width: 307px;
+			max-height: 307px;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	.catalog_desc {
+		color: rgb(12, 26, 55);
+		font-size: 26px;
+		font-weight: 600;
+		line-height: 33px;
+		text-align: center;
+		user-select: none;
+	}
+}
+
 // news section
 .news {
 	background-color: #b8cedb;
 	#title {
 		margin-bottom: 55px;
+	}
+	.news_swiper,
+	.d_lg_none {
+		display: none;
 	}
 	.news_block {
 		display: flex;
@@ -271,7 +328,10 @@ header{
 	background-size: cover;
 	padding-bottom: 90px;
 	#title {
-		transform: translate(0, -35px);
+		transform: translate(0, -4px);
+	}
+	.blue_button#mobile_blue {
+		display: none;
 	}
 	.company_top {
 		display: flex;
@@ -333,21 +393,7 @@ header{
 	.offer_swiper {
 		padding-bottom: 130px;
 	}
-	.swiper_offer_nav {
-		i {
-			border-radius: 6px;
-			background: transparent;
-			padding: 8px 10px 8px 10px;
-			color: rgb(12, 26, 55);
-			font-size: 33px;
-			cursor: pointer;
-			transition: all ease-in 0.2s;
-			&:hover {
-				background: rgb(12, 26, 55);
-				color: #fff;
-			}
-		}
-	}
+
 	.swiper_offer_prev {
 		position: absolute;
 		top: 37%;

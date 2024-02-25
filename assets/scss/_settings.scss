@@ -16,59 +16,26 @@ a {
 	text-decoration: none;
 }
 // main title with border
+
 #title {
 	position: relative;
-	z-index: 0;
+	top: -17px;
+	width: 100%;
+	text-wrap: nowrap;
+	font-size: 30px;
 	text-align: center;
-	color: rgb(12, 26, 55);
-	font-size: 50px;
-	font-weight: 700;
-	line-height: 68px;
-	span {
-		padding: 0 55px;
-		position: relative;
-		z-index: 123;
-	}
-	&::after {
-		content: "";
-		position: absolute;
-		top: 0px;
-		bottom: 0;
-		margin: auto;
-		left: 0;
-		z-index: 2;
-		width: calc(41% - 55px);
-		height: 1px;
-		background-color: rgb(12, 26, 55);
-	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0px;
-		bottom: 0;
-		margin: auto;
-		right: 0;
-		z-index: 2;
-		width: calc(41% - 55px);
-		height: 1px;
-		background-color: rgb(12, 26, 55);
-	}
+	display: flex;
+	justify-content: space-between;
+	gap: 55px;
+	align-items: center;
 }
-// .titles_block {
-// 	position: relative;
-// 	border-bottom: 1px solid rgb(12, 26, 55);
-// 	.titles {
-// 		color: rgb(12, 26, 55);
-// 		font-size: 50px;
-// 		font-weight: 700;
-// 		line-height: 68px;
-// 		padding: 0 55px;
-// 		position: absolute;
-// 		top: 0;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 	}
-// }
+#title::after,
+#title::before {
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: rgb(12, 26, 55);
+}
 
 // blue button
 
@@ -104,4 +71,21 @@ a {
 }
 .section_padding {
 	padding-bottom: 130px;
+}
+
+// swiper nav
+.swiper_offer_nav {
+	i {
+		border-radius: 6px;
+		background: transparent;
+		padding: 8px 10px 8px 10px;
+		color: rgb(12, 26, 55);
+		font-size: 33px;
+		cursor: pointer;
+		transition: all ease-in 0.2s;
+		&:hover {
+			background: rgb(12, 26, 55);
+			color: #fff;
+		}
+	}
 }

@@ -61,6 +61,14 @@
 	footer .footer_last {
 		gap: 15px;
 	}
+	.catalog#catalog_page {
+		.swiper_item {
+			height: 345px;
+		}
+		.catalog_desc {
+			font-size: 19px;
+		}
+	}
 	.company #title {
 		transform: translate(0, -4px);
 	}
@@ -150,6 +158,36 @@
 @media (max-width: 992px) {
 	body:has(.menus.active) {
 		overflow: hidden;
+	}
+	.container {
+		max-width: 720px;
+	}
+	.breadcrumb_block .breadcrumb li {
+		font-size: 16px;
+		line-height: 22px;
+		a {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+	.breadcrumb_block .breadcrumb li + li:before {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	.catalog#catalog_page .swiper_item {
+		height: 315px;
+	}
+	.catalog .catalog_desc {
+		font-size: 18px;
+		line-height: 25px;
+	}
+	.catalog#catalog_page .catalog_block {
+		margin-bottom: 60px;
+		padding-top: 15px;
+	}
+	.catalog#catalog_page .catalog_descriptions p {
+		font-size: 16px;
+		line-height: 22px;
 	}
 	header {
 		.header_row {
@@ -303,26 +341,32 @@
 			}
 		}
 	}
-	.hero{
+	.catalog#catalog_page {
+		.swiper_item {
+			width: calc(33% - 14px);
+		}
+	}
+	.hero {
 		padding: 250px 0;
 		margin: 0 0 60px 0;
 	}
 	.hero .next svg,
-	.hero .prev svg{
+	.hero .prev svg {
 		width: 13px;
 		height: 25px;
 	}
-	.hero .prev{
+	.hero .prev {
 		padding: 4px 12px 4px 8px;
 	}
-	.hero .next{
+	.hero .next {
 		padding: 4px 8px 4px 12px;
 	}
-	.hero .prev, .hero .next{
+	.hero .prev,
+	.hero .next {
 		width: 34px;
 		height: 34px;
 	}
-	.hero h1{
+	.hero h1 {
 		font-size: 38px;
 		line-height: 42px;
 	}
@@ -477,7 +521,7 @@
 		font-size: 18px;
 	}
 	.catalog .swiper_item {
-		height: 340px;
+		height: 320px;
 	}
 	.blue_button a,
 	.blue_button button {
@@ -497,7 +541,29 @@
 			}
 		}
 	}
-	.hero{
+	.catalog#catalog_page {
+		padding-top: 30px;
+	}
+	.breadcrumb_block {
+		padding-top: 20px;
+	}
+	.breadcrumb_block .breadcrumb li {
+		font-size: 12px;
+		line-height: 16px;
+		a {
+			font-size: 12px;
+			line-height: 16px;
+		}
+	}
+	.breadcrumb_block .breadcrumb li + li:before {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.catalog#catalog_page .swiper_item {
+		width: 47%;
+		height: 345px;
+	}
+	.hero {
 		margin: 0 0 50px 0;
 	}
 	.subscribe_block {
@@ -525,7 +591,6 @@
 	}
 }
 @media (max-width: 576px) {
-
 	header {
 		.header_row {
 			gap: 12px;
@@ -571,7 +636,7 @@
 			}
 		}
 	}
-	.hero{
+	.hero {
 		padding: 42px 0 69px 0;
 		margin: 0 0 16px 0;
 	}
@@ -770,6 +835,11 @@
 	}
 	.catalog .swiper_img {
 		margin-bottom: 20px;
+		text-align: center;
+		img {
+			max-width: 165px;
+			max-height: 165px;
+		}
 	}
 	.catalog .swiper_item {
 		padding: 11px 6px 14px 6px;

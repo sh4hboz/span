@@ -251,7 +251,6 @@ header .header_right .hamburger {
 }
 
 .catalog {
-  padding-top: 130px;
   background-color: #b8cedb;
 }
 .catalog .catalog_block {
@@ -1118,6 +1117,12 @@ a {
   footer .footer_last {
     gap: 15px;
   }
+  .catalog#catalog_page .swiper_item {
+    height: 345px;
+  }
+  .catalog#catalog_page .catalog_desc {
+    font-size: 19px;
+  }
   .company #title {
     transform: translate(0, -4px);
   }
@@ -1193,6 +1198,9 @@ a {
 @media (max-width: 992px) {
   body:has(.menus.active) {
     overflow: hidden;
+  }
+  .container {
+    max-width: 720px;
   }
   header .header_row {
     padding: 31px 0;
@@ -1340,6 +1348,9 @@ a {
   header .header_middle .menus .close_menu :hover {
     background: rgb(250, 250, 250);
   }
+  .catalog#catalog_page .swiper_item {
+    width: calc(33% - 14px);
+  }
   .hero {
     padding: 250px 0;
     margin: 0 0 60px 0;
@@ -1355,7 +1366,8 @@ a {
   .hero .next {
     padding: 4px 8px 4px 12px;
   }
-  .hero .prev, .hero .next {
+  .hero .prev,
+  .hero .next {
     width: 34px;
     height: 34px;
   }
@@ -1516,7 +1528,7 @@ a {
     font-size: 18px;
   }
   .catalog .swiper_item {
-    height: 340px;
+    height: 320px;
   }
   .blue_button a,
   .blue_button button {
@@ -1531,6 +1543,28 @@ a {
 @media (max-width: 768px) {
   header .header_right .search_wrap {
     display: none;
+  }
+  .catalog#catalog_page {
+    padding-top: 30px;
+  }
+  .breadcrumb_block {
+    padding-top: 20px;
+  }
+  .breadcrumb_block .breadcrumb li {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .breadcrumb_block .breadcrumb li a {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .breadcrumb_block .breadcrumb li + li:before {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .catalog#catalog_page .swiper_item {
+    width: 47%;
+    height: 345px;
   }
   .hero {
     margin: 0 0 50px 0;
@@ -1797,6 +1831,11 @@ a {
   }
   .catalog .swiper_img {
     margin-bottom: 20px;
+    text-align: center;
+  }
+  .catalog .swiper_img img {
+    max-width: 165px;
+    max-height: 165px;
   }
   .catalog .swiper_item {
     padding: 11px 6px 14px 6px;

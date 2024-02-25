@@ -71,15 +71,15 @@ $(document).ready(function () {
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
-				slidesPerView: 1,
-				spaceBetween: 20,
+				slidesPerView: 2,
+				spaceBetween: 10,
 			},
 			// when window width is >= 640px
 			577: {
 				slidesPerView: 2,
 				spaceBetween: 20,
 			},
-			993: {
+			769: {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},

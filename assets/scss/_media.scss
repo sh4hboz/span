@@ -8,73 +8,149 @@
 	.container {
 		max-width: 1140px;
 	}
-	header{
-		.header_row{
+	header {
+		.header_row {
 			gap: 60px;
-			.brand_logo{
-				img{
+			.brand_logo {
+				img {
 					width: 171px;
-    				height: 30px;
+					height: 30px;
 				}
 			}
 		}
-		.header_middle{
+		.header_middle {
 			gap: 15px;
-			.menus{
+			.menus {
 				gap: 30px;
 			}
 		}
-		.header_right{
-			.to_tel{
+		.header_right {
+			.to_tel {
 				font-size: 26px;
 			}
 		}
+	}
+	.swiper_navs {
+		display: none;
+	}
+	.catalog .swiper_img img {
+		width: 100%;
+	}
+	.catalog .catalog_desc {
+		font-size: 24px;
+	}
+	.catalog .swiper_item {
+		height: 430px;
 	}
 }
 @media (max-width: 1200px) {
 	.container {
 		max-width: 960px;
 	}
-	header{
-		.header_row{
+	header {
+		.header_row {
 			gap: 40px;
-			.brand_logo{
-				img{
+			.brand_logo {
+				img {
 					width: 120px;
 				}
 			}
 			padding: 20px 0;
 		}
-		.header_middle{
-			.menus{
+		.header_middle {
+			.menus {
 				gap: 20px;
 			}
 		}
-		.header_right{
-			.to_tel{
+		.header_right {
+			.to_tel {
 				gap: 13px;
 				font-size: 20px;
 			}
-			.blue_button{
-				a{
+			.blue_button {
+				a {
 					font-size: 19px;
 				}
 			}
 		}
+	}
+	.catalog .swiper_img {
+		margin-bottom: 35px;
 	}
 }
 @media (max-width: 992px) {
 	.container {
 		max-width: 720px;
 	}
+	.catalog .catalog_block {
+		padding-top: 27px;
+	}
+	.catalog .catalog_desc {
+		font-size: 18px;
+	}
+	.catalog .swiper_item {
+		height: 340px;
+	}
+	.blue_button a,
+	.blue_button button {
+		width: 210px;
+		font-size: 16px;
+		padding: 15px 0;
+	}
+	.section_padding {
+		padding-bottom: 80px;
+	}
 }
 @media (max-width: 768px) {
 	.container {
 		max-width: 540px;
 	}
+	.catalog .swiper_item {
+		height: auto;
+		padding: 11px 12px 15px 12px;
+	}
+	.catalog .catalog_desc {
+		line-height: 25px;
+	}
+	.catalog .catalog_block {
+		margin-bottom: 20px;
+	}
 }
 @media (max-width: 576px) {
 	.container {
 		max-width: 100%;
+		padding: 0 18px;
+	}
+	.catalog .catalog_block {
+		padding-top: 0px;
+	}
+	.catalog .catalog_desc {
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.catalog .swiper_img {
+		margin-bottom: 20px;
+	}
+	.catalog .swiper_item {
+		padding: 11px 6px 14px 6px;
+	}
+	.catalog .catalog_block {
+		margin-bottom: 00px;
+	}
+	.catalog .catalog_swiper {
+		padding-bottom: 20px;
+	}
+	#title {
+		font-size: 22px;
+		gap: 30px;
+	}
+	.blue_button a,
+	.blue_button button {
+		width: 157px;
+		padding: 10px 0;
+		font-size: 13px;
+	}
+	.section_padding {
+		padding-bottom: 35px;
 	}
 }

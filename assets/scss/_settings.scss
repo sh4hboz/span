@@ -123,3 +123,50 @@ a {
 		}
 	}
 }
+// input placeholder
+.for_placeholder{
+	position: relative;
+	span{
+		position: absolute;
+		left: 23px;
+		top: 17px;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 25px;
+		z-index: 1;
+		transition: .3s all ease-out;
+		cursor: pointer;
+	}
+	input,textarea{
+		padding: 21px 28px 21px 28px;
+		border: 1px solid #B8CEDB;
+		border-radius: 10px;
+		background: rgb(250, 250, 250);
+		transition: .3s all ease-out;
+		outline: none;
+		width: 100%;
+		cursor: pointer;
+		&.error{
+			border-color: #FF0000;
+		}
+	}
+	input:active,input:focus,input:hover,
+	textarea:active,textarea:focus,textarea:hover{
+		border-color: #0C1A37;
+		cursor: text;
+	}
+	&:has(input:not(:placeholder-shown), textarea:not(:placeholder-shown), input:focus, textarea:focus) span{
+		font-size: 14px;
+		line-height: 19px;
+		padding: 1px 5px;
+		background-color: #FAFAFA;
+		top: -10px;
+	}
+	&:has(input.error, textarea.error) span{
+		color: #FF0000;
+	}
+	textarea{
+		height: 151px;
+		resize: none;
+	}
+}

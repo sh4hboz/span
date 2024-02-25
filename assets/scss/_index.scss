@@ -210,6 +210,10 @@ header {
 	#title {
 		margin-bottom: 55px;
 	}
+	.news_swiper,
+	.d_lg_none {
+		display: none;
+	}
 	.news_block {
 		display: flex;
 		align-items: center;

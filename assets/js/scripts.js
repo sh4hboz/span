@@ -89,4 +89,17 @@ $(document).ready(function () {
 			},
 		},
 	});
+
+	// news swiper
+	const news_swiper = new Swiper(".news_swiper", {
+		// Default parameters
+		slidesPerView: 1.3,
+		spaceBetween: 10,
+		loop: true,
+		centeredSlides: true,
+		grabCursor: true,
+		// autoplay: {
+		// 	delay: 2000,
+		// },
+	});
 });

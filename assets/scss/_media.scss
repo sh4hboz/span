@@ -118,6 +118,23 @@
 	.catalog .catalog_block {
 		padding-top: 27px;
 	}
+	.special_offers .offer_desc {
+		font-size: 18px;
+		line-height: 25px;
+	}
+
+	.special_offers .swiper_item {
+		padding: 19px 9px 22px 9px;
+	}
+	.special_offers .offer_block {
+		padding-top: 20px;
+	}
+	.special_offers {
+		padding: 80px 0 0 0;
+	}
+	.special_offers .offer_swiper {
+		padding-bottom: 80px;
+	}
 	.company {
 		padding-bottom: 50px;
 	}
@@ -184,6 +201,9 @@
 		height: auto;
 		padding: 11px 12px 15px 12px;
 	}
+	.special_offers #title {
+		text-wrap: wrap;
+	}
 	.catalog .catalog_desc {
 		line-height: 25px;
 	}
@@ -198,6 +218,33 @@
 	}
 	.img_item {
 		display: none;
+	}
+	.special_offers .offer_block {
+		padding-top: 10px;
+	}
+	.special_offers .swiper_img {
+		margin-bottom: 15px;
+		img {
+			max-width: 163px;
+		}
+	}
+	.special_offers .offer_desc {
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.special_offers {
+		padding: 40px 0 0 0;
+	}
+	#swiper_container.container {
+		padding: 0;
+		padding-left: 18px;
+	}
+	#news_container.container {
+		padding: 0;
+	}
+
+	.special_offers .offer_swiper {
+		padding-bottom: 40px;
 	}
 	.company .company_block {
 		margin-bottom: 25px;
@@ -255,7 +302,7 @@
 		font-size: 13px;
 	}
 	.section_padding {
-		padding-bottom: 35px;
+		padding-bottom: 40px;
 	}
 	.news .news_body {
 		padding: 10px 16px;

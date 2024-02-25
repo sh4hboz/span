@@ -31,8 +31,8 @@ $(document).ready(function () {
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
-				slidesPerView: 1,
-				spaceBetween: 20,
+				slidesPerView: 1.6,
+				spaceBetween: 15,
 			},
 			// when window width is >= 640px
 			577: {
@@ -40,7 +40,7 @@ $(document).ready(function () {
 				spaceBetween: 20,
 			},
 			993: {
-				slidesPerView: 3,
+				slidesPerView: 4,
 				spaceBetween: 20,
 			},
 			1201: {
@@ -71,7 +71,7 @@ $(document).ready(function () {
 		breakpoints: {
 			// when window width is >= 320px
 			320: {
-				slidesPerView: 2,
+				slidesPerView: 1.7,
 				spaceBetween: 10,
 			},
 			// when window width is >= 640px
@@ -90,7 +90,7 @@ $(document).ready(function () {
 		},
 	});
 
-	// news swiper
+	// news mobile swiper
 	const news_swiper = new Swiper(".news_swiper", {
 		// Default parameters
 		slidesPerView: 1.3,

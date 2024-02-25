@@ -50,12 +50,12 @@ $(document).ready(function () {
 		},
 	});
 
-	const hero_swiper = new Swiper(".hero", {
+	const hero_swiper = new Swiper(".hero .swiper", {
 		slidesPerView: 1,
 		loop: true,
 		navigation: {
-			nextEl: ".hero .next",
-			prevEl: ".hero .prev",
+			nextEl: ".hero .swiper .next",
+			prevEl: ".hero .swiper .prev",
 		},
 	});
 	$(".hamburger , .close_menu img").click(function () {

@@ -7,6 +7,9 @@ body {
 	font-family: "OpenSans", sans-serif;
 	background: rgb(184, 206, 219);
 }
+ul {
+	list-style: none;
+}
 .wrapper {
 	overflow: hidden;
 }
@@ -23,12 +26,14 @@ a {
 	top: -17px;
 	width: 100%;
 	text-wrap: nowrap;
-	font-size: 30px;
+	font-size: 50px;
 	text-align: center;
 	display: flex;
+	font-weight: 700;
 	justify-content: space-between;
 	gap: 55px;
 	align-items: center;
+	user-select: none;
 }
 #title::after,
 #title::before {

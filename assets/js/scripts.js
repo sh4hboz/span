@@ -49,4 +49,15 @@ $(document).ready(function () {
 			},
 		},
 	});
+
+	const hero_swiper = new Swiper(".hero", {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: ".hero .next",
+			prevEl: ".hero .prev",
+		},
+	})
+	$('.hamburger , .close_menu img').click(function(){
+		$('.menus').toggleClass('active')
+	})
 });

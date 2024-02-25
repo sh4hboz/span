@@ -23,6 +23,7 @@ header{
 			display: flex;
 			align-items: center;
 			gap: 57px;
+			transition: .3s all ease-out;
 			li{
 				font-size: 20px;
 				font-weight: 400;
@@ -36,6 +37,7 @@ header{
 				cursor: pointer;
 				position: relative;
 				transition: .3s all ease-out;
+				
 			}
 			li:hover{
 				-webkit-text-stroke: 1px rgb(12, 26, 55);
@@ -48,11 +50,11 @@ header{
 				flex-direction: column;
 				position: absolute;
 				left: 0;
-				top: calc(100% + 11px);
+				top: calc(100% + 30px);
 				opacity: 0;
 				visibility: hidden;
 				transform: translateY(20px);
-				z-index: 1;
+				z-index: 2;
 				background: rgb(250, 250, 250);
 				min-width: 416px;
 				transition: .3s all ease-out;
@@ -102,6 +104,9 @@ header{
 					-webkit-text-stroke: 1px rgb(12, 26, 55);
 				}
 			}
+			.close_menu{
+				display: none;
+			}
 		}
 		ul{
 			list-style: none;
@@ -116,7 +121,7 @@ header{
 			background: rgb(196, 215, 226);
 			padding: 12px 20px 12px 58px;
 			color: rgb(12, 26, 55);
-			font-family: Open Sans;
+			font-family: OpenSans;
 			font-size: 16px;
 			font-weight: 300;
 			line-height: 22px;
@@ -149,6 +154,64 @@ header{
 				padding: 15.5px 0;
 			}
 		}
+		.search_wrap, .hamburger{
+			display: none;
+		}
+	}
+}
+// HERO
+.hero{
+	padding: 345px 0 308px 0;
+	background-image: url(../images/hero_bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	.swiper-wrapper{
+		display: flex;
+		align-items: stretch;
+		.swiper-slide{
+			height: auto;
+			.container{
+				height: 100%;
+			}
+		}
+	}
+	h1{
+		font-size: 50px;
+		font-weight: 700;
+		line-height: 68px;
+		color: rgb(255, 255, 255);
+		margin: 0 0 32px 0;
+		max-width: 1150px;
+		width: 100%;
+	}
+	.blue_button{
+		text-align: left;
+		a{
+			text-align: center;
+		}
+	}
+	.prev, .next{
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,0);
+		z-index: 2;
+		cursor: pointer;
+	}
+	.prev{
+		left: 150px;
+		padding: 8px 20px 8px 15px;
+		width: 58px;
+		height: 58px;
+	}
+	.next{
+		right: 150px;
+		padding: 8px 15px 8px 20px;
+		width: 58px;
+		height: 58px;
+	}
+	.swiper-button-disabled{
+		cursor: auto;
 	}
 }
 // news section

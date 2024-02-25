@@ -28,7 +28,15 @@
 			.to_tel{
 				font-size: 26px;
 			}
+			.blue_button{
+				a{
+					max-width: 257px;	
+				}
+			}
 		}
+	}
+	header .header_middle .menus li.has_submenu .submenu{
+		top: calc(100% + 35px);
 	}
 }
 @media (max-width: 1200px) {
@@ -48,6 +56,13 @@
 		.header_middle{
 			.menus{
 				gap: 20px;
+				li{
+					.has_submenu{
+						.submenu{
+							top: calc(100% + 28px);
+						}
+					}
+				}
 			}
 		}
 		.header_right{
@@ -57,24 +72,234 @@
 			}
 			.blue_button{
 				a{
-					font-size: 19px;
+					font-size: 18px;
+					max-width: 208px;
 				}
 			}
 		}
 	}
 }
 @media (max-width: 992px) {
+	body:has(.menus.active){
+		overflow: hidden;
+	}
 	.container {
 		max-width: 720px;
+	}
+	header{
+		.header_row{
+			padding: 31px 0;
+		}
+		.header_middle{
+			.menus{
+				position: fixed;
+				flex-direction: column;
+				right: -100%;
+				left: auto;
+				top: 106px;
+				gap: 0;
+				z-index: 2;
+				min-width: 395px;
+				border-top-left-radius: 10px;
+				align-items: flex-start;
+				background-color: rgb(250, 250, 250);
+				box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1);
+				li{
+					width: 100%;
+					padding: 8px 16px;
+					height: 58px;
+					border-top: 1px solid rgb(184, 206, 219);
+					font-weight: 700;
+					height: 58px;
+					.submenu li{
+						font-weight: 600;
+					}
+					.inner_submenu li{
+						font-weight: 300;
+					}
+					&.has_submenu:hover{
+						flex-direction: column;
+						align-items: flex-start;
+						height: auto;
+						border-color: rgb(184, 206, 219);
+						padding-bottom: 0;
+						-webkit-text-stroke: 0;
+						.submenu{
+							position: relative;
+							border-color: rgb(184, 206, 219);
+							li{
+								border-color: rgb(184, 206, 219);
+							}
+							li:hover{
+								flex-direction: column;
+								align-items: flex-start;
+								height: auto;
+								padding: 17px 0 0 0;
+								gap: 19px;
+								.inner_submenu{
+									position: relative;
+									transform: none;
+									width: 100%;
+									li{
+										padding: 8px 32px 8px 32px;
+									}
+								}
+								a{
+									margin: 0 0 0 25px;
+								}
+								img{
+									transform: rotate(-90deg);
+								}
+							}
+						}
+						img{
+							position: absolute;
+							right: 16px;
+							top: 20px;
+							transform: rotate(-180deg);
+						}
+					}
+					&.has_submenu{
+						padding: 16px 0;
+						border-bottom: none;
+						gap: 15px;
+						.submenu{
+							border-top: 1px solid rgb(184, 206, 219);
+							li{
+								height: 58px;
+								padding: 8px 25px 8px 25px;
+								img{
+									transform: rotate(90deg);
+								}
+							}
+						}
+						span{
+							margin: 0 0 0 16px;
+						}
+						&:hover{
+							background-color: rgb(184, 206, 219);
+							color: rgb(250, 250, 250);
+						}
+					}
+				}
+				li:hover{
+					-webkit-text-stroke: 0;
+				}
+				&.active{
+					right: 0;
+				}
+				
+			}
+			.search_wrap{
+				display: none;
+			}
+		}
+		.header_right{
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: 16px;
+			span{
+				display: none;
+			}
+			.search_wrap , .hamburger{
+				display: block;
+			}
+			.to_tel{
+				border: 1px solid rgb(12, 26, 55);
+				border-radius: 7px;
+				padding: 7px;
+				img{
+					width: 28px;
+					height: 28px;
+				}
+			}
+			.blue_button a{
+				font-size: 14px;
+				line-height: 22px;
+				max-width: 200px;
+				padding: 9px 0;
+			}
+		}
+		.search_wrap{
+			input{
+				height: 44px;
+				border-radius: 8px;
+				padding: 12px 20px 12px 43px;
+			}
+			img{
+				left: 15px;
+			}
+		}
+		.header_middle .menus .close_menu{
+			display: flex;
+			border: none;
+			:hover{
+				background: rgb(250, 250, 250);
+			}
+		}
 	}
 }
 @media (max-width: 768px) {
 	.container {
 		max-width: 540px;
 	}
+	header{
+		.header_right{
+			.search_wrap{
+				display: none;
+			}
+		}
+	}
 }
 @media (max-width: 576px) {
 	.container {
 		max-width: 100%;
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+	header{
+		.header_row{
+			gap: 12px;
+			padding: 19.5px 0;
+			.brand_logo{
+				img{
+					width: 101px;
+					height: 27px;
+				}
+			}
+		}
+		.header_right{
+			gap: 12px;
+			.blue_button{
+				a{
+					font-size: 11px;
+					line-height: 15px;
+					width: 123px;
+					padding: 7px 0;
+				}
+			}
+			.to_tel img{
+				width: 17px;
+				height: 17px;
+			}
+			.hamburger{
+				width: 33px;
+				height: 33px;
+			}
+		}
+		.header_middle{
+			.menus{
+				top: 72px;
+				min-width: 375px;
+				max-width: 375px;
+				border-radius: 0;
+				li.has_submenu{
+					.submenu{
+						min-width: 375px;
+						max-width: 375px;
+					}
+				}
+			}
+		}
 	}
 }

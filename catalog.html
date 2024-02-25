@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Шрифты -->
-    <link rel="stylesheet" href="./assets/fonts/font.css">
+    <link rel="stylesheet" href="assets/fonts/font.css">
     <!-- swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <!-- Css -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -290,15 +290,56 @@
             </div>
         </footer>
 
+        <div class="modal_back">
+            <div class="for_close"></div>
+            <div class="modal modal1">
+                <img class="close_modal" src="assets/images/icon/close_icon.svg" alt="">
+                <h2 class="modal_title">Заказать продукт</h2>
+                <form id="order_form">
+                    <div class="inputs">
+                        <label class="for_placeholder">
+                            <span>Имя*</span>
+                            <input name="name" type="text" placeholder="">
+                        </label>
+                        <label class="for_placeholder">
+                            <span>Телефон*</span>
+                            <input name="tel" type="tel" placeholder="">
+                        </label>
+                        <label class="for_placeholder">
+                            <span>Электронная почта*</span>
+                            <input type="email" placeholder="">
+                        </label>
+                        <label class="for_placeholder">
+                            <span>Сообщение*</span>
+                            <textarea cols="30" rows="10" placeholder=""></textarea>
+                        </label>
+                    </div>
+                    <div class="form_actions">
+                        <label>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <p>Я даю свое согласие на обработку персональных данных и соглашаюсь с <a href="#">политикой конфиденциальности</a>.</p>
+                        </label>
+                        <div class="blue_button">
+                            <button type="submit">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal modal2">
+                <img class="close_modal" src="assets/images/icon/close_icon.svg" alt="">
+                <h2 class="modal_title">Спасибо! <br> Мы свяжемся с вами в <br> ближайшее время</h2>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Juqery -->
-    <script src="./assets/libs/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/libs/jquery-3.6.0.min.js"></script>
+    <script src="assets/libs/swiper-bundle.min.js"></script>
+    <script src="assets/libs/inputmask.min.js"></script>
+    <script src="assets/libs/jquery-validate-1_19_5.js"></script>
     <!-- JS -->
-    <script src="./assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

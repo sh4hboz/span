@@ -128,8 +128,8 @@ a {
 	position: relative;
 	span{
 		position: absolute;
-		left: 23px;
-		top: 17px;
+		left: 28px;
+		top: 22px;
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 25px;
@@ -145,6 +145,10 @@ a {
 		transition: .3s all ease-out;
 		outline: none;
 		width: 100%;
+		font-family: OpenSans;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 25px;
 		cursor: pointer;
 		&.error{
 			border-color: #FF0000;
@@ -161,6 +165,7 @@ a {
 		padding: 1px 5px;
 		background-color: #FAFAFA;
 		top: -10px;
+		left: 23px;
 	}
 	&:has(input.error, textarea.error) span{
 		color: #FF0000;

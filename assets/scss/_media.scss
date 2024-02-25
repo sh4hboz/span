@@ -532,6 +532,50 @@
 	.section_padding {
 		padding-bottom: 80px;
 	}
+	.modal_back{
+		.modal{
+			padding: 22px 32px 32px 32px;
+			max-width: 674px;
+			gap: 31px;
+			.modal_title{
+				font-size: 32px;
+				line-height: 44px;
+			}
+			form{
+				gap: 16px;
+			}
+			.form_actions{
+				gap: 30px;
+				label{
+					p{
+						font-size: 16px;
+						line-height: 22px;
+					}
+				}
+			}
+			.blue_button{
+				button{
+					padding: 11px 0;
+				}
+			}
+		}
+	}
+	.for_placeholder input, .for_placeholder textarea {
+		padding: 15px 28px 15px 28px;
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.for_placeholder span{
+		top: 16px;
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.for_placeholder textarea{
+		height: 126px;
+	}
+	.open_modal.modal2_active .modal2{
+		min-height: 500px;
+	}
 }
 @media (max-width: 768px) {
 	header {
@@ -588,6 +632,14 @@
 	}
 	.catalog .catalog_block {
 		margin-bottom: 20px;
+	}
+	.modal_back{
+		.modal{
+			max-width: 536px;
+			.close_modal{
+				right: 22px;
+			}
+		}
 	}
 }
 @media (max-width: 576px) {
@@ -899,6 +951,63 @@
 	.news .news_swiper,
 	.d_lg_none {
 		display: block;
+	}
+	.modal_back{
+		.modal{
+			max-width: calc(100% - 20px);
+			padding: 21px 22px;
+			gap: 25px;
+			.blue_button{
+				button{
+					padding: 3.5px 0;
+				}
+			}
+			.modal_title{
+				font-size: 22px;
+				line-height: 30px;
+			}
+			.inputs{
+				gap: 6px;
+			}
+			form{
+				gap: 11px;
+			}
+			.close_modal{
+				right: 13px;
+			}
+			.form_actions{
+				gap: 26px;
+				label{
+					gap: 12px;
+					.checkmark{
+						width: 22px;
+						height: 22px;
+						&::after{
+							width: 10px;
+							height: 5px;
+						}
+					}
+					p{
+						font-size: 13px;
+						line-height: 18px;
+					}
+				}
+			}
+		}
+	}
+	.for_placeholder input, .for_placeholder textarea{
+		font-size: 11px;
+		line-height: 15px;
+		padding: 10px 16px 10px 16px;
+	}
+	.for_placeholder span{
+		font-size: 11px;
+		line-height: 15px;
+		top: 11px;
+		left: 16px;
+	}
+	.open_modal.modal2_active .modal2{
+		min-height: 350px;
 	}
 }
 

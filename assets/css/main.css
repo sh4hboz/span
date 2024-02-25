@@ -684,10 +684,11 @@ footer .social_title {
 }
 .modal_back .modal {
   position: absolute;
-  padding: 0;
+  padding: 70px;
   max-width: 936px;
   width: 100%;
   height: 0;
+  max-height: calc(100svh - 40px);
   display: flex;
   align-items: flex-start;
   gap: 50px;
@@ -698,6 +699,7 @@ footer .social_title {
   z-index: 2;
   visibility: hidden;
   opacity: 0;
+  overflow: auto;
 }
 .modal_back .modal.modal2 .modal_title {
   text-align: center;
@@ -716,6 +718,9 @@ footer .social_title {
   height: 41px;
   padding: 10px;
   cursor: pointer;
+}
+.modal_back .modal .blue_button button {
+  padding: 19px 0;
 }
 .modal_back .for_close {
   width: 100%;
@@ -740,7 +745,6 @@ footer .social_title {
 
 .open_modal.modal1_active .modal1 {
   position: relative;
-  padding: 70px;
   height: auto;
   opacity: 1;
   visibility: visible;
@@ -748,11 +752,10 @@ footer .social_title {
 
 .open_modal.modal2_active .modal2 {
   position: relative;
-  padding: 70px;
   height: auto;
   opacity: 1;
   visibility: visible;
-  min-height: 862px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1013,8 +1016,8 @@ a {
 }
 .for_placeholder span {
   position: absolute;
-  left: 23px;
-  top: 17px;
+  left: 28px;
+  top: 22px;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -1030,6 +1033,10 @@ a {
   transition: 0.3s all ease-out;
   outline: none;
   width: 100%;
+  font-family: OpenSans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
   cursor: pointer;
 }
 .for_placeholder input.error, .for_placeholder textarea.error {
@@ -1046,6 +1053,7 @@ a {
   padding: 1px 5px;
   background-color: #FAFAFA;
   top: -10px;
+  left: 23px;
 }
 .for_placeholder:has(input:not(:placeholder-shown), textarea:not(:placeholder-shown), input:focus, textarea:focus) span {
   font-size: 14px;
@@ -1053,6 +1061,7 @@ a {
   padding: 1px 5px;
   background-color: #FAFAFA;
   top: -10px;
+  left: 23px;
 }
 .for_placeholder:has(input.error, textarea.error) span {
   color: #FF0000;
@@ -1566,6 +1575,44 @@ a {
   .section_padding {
     padding-bottom: 80px;
   }
+  .modal_back .modal {
+    padding: 22px 32px 32px 32px;
+    max-width: 674px;
+    gap: 31px;
+  }
+  .modal_back .modal .modal_title {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .modal_back .modal form {
+    gap: 16px;
+  }
+  .modal_back .modal .form_actions {
+    gap: 30px;
+  }
+  .modal_back .modal .form_actions label p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .modal_back .modal .blue_button button {
+    padding: 11px 0;
+  }
+  .for_placeholder input, .for_placeholder textarea {
+    padding: 15px 28px 15px 28px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .for_placeholder span {
+    top: 16px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .for_placeholder textarea {
+    height: 126px;
+  }
+  .open_modal.modal2_active .modal2 {
+    min-height: 500px;
+  }
 }
 @media (max-width: 768px) {
   header .header_right .search_wrap {
@@ -1618,6 +1665,12 @@ a {
   }
   .catalog .catalog_block {
     margin-bottom: 20px;
+  }
+  .modal_back .modal {
+    max-width: 536px;
+  }
+  .modal_back .modal .close_modal {
+    right: 22px;
   }
 }
 @media (max-width: 576px) {
@@ -1922,6 +1975,59 @@ a {
   .news .news_swiper,
   .d_lg_none {
     display: block;
+  }
+  .modal_back .modal {
+    max-width: calc(100% - 20px);
+    padding: 21px 22px;
+    gap: 25px;
+  }
+  .modal_back .modal .blue_button button {
+    padding: 3.5px 0;
+  }
+  .modal_back .modal .modal_title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .modal_back .modal .inputs {
+    gap: 6px;
+  }
+  .modal_back .modal form {
+    gap: 11px;
+  }
+  .modal_back .modal .close_modal {
+    right: 13px;
+  }
+  .modal_back .modal .form_actions {
+    gap: 26px;
+  }
+  .modal_back .modal .form_actions label {
+    gap: 12px;
+  }
+  .modal_back .modal .form_actions label .checkmark {
+    width: 22px;
+    height: 22px;
+  }
+  .modal_back .modal .form_actions label .checkmark::after {
+    width: 10px;
+    height: 5px;
+  }
+  .modal_back .modal .form_actions label p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .for_placeholder input, .for_placeholder textarea {
+    font-size: 11px;
+    line-height: 15px;
+    padding: 10px 16px 10px 16px;
+  }
+  .for_placeholder span {
+    font-size: 11px;
+    line-height: 15px;
+    top: 11px;
+    left: 16px;
+  }
+  .open_modal.modal2_active .modal2 {
+    min-height: 350px;
   }
 }
 @media only screen and (min-width: 576px) {

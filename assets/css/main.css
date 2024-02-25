@@ -228,6 +228,7 @@ header .header_right .hamburger {
 .hero .next:not(.swiper-button-disabled):hover svg path {
   fill: rgb(255, 255, 255);
 }
+.hero .swiper-button-disabled,
 .hero .swiper-button-disabled {
   cursor: auto;
 }

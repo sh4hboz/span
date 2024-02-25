@@ -50,7 +50,6 @@ header .header_middle .menus li.has_submenu .submenu {
   position: absolute;
   left: 0;
   top: calc(100% + 30px);
-  top: calc(100% + 9px);
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -151,62 +150,6 @@ header .header_right .to_tel {
 header .header_right .blue_button a {
   padding: 15.5px 0;
 }
-
-.catalog {
-  background-color: #b8cedb;
-}
-.catalog .catalog_block {
-  padding-top: 55px;
-  position: relative;
-  margin-bottom: 20px;
-}
-.catalog .catalog_swiper {
-  padding-bottom: 30px;
-}
-.catalog .swiper_item {
-  border-radius: 10px;
-  background: rgb(255, 255, 255);
-  padding: 15px 15px 30px 15px;
-  height: 498px;
-  transition: all ease-in 0.2s;
-}
-.catalog .swiper_item:hover {
-  box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.192);
-}
-.catalog .swiper_offer_prev {
-  position: absolute;
-  top: 48%;
-  left: -50px;
-}
-.catalog .swiper_offer_next {
-  right: -50px;
-  position: absolute;
-  top: 48%;
-}
-.catalog .swiper_img {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  margin-bottom: 75px;
-}
-.catalog .swiper_img img {
-  max-width: 307px;
-  max-height: 307px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.catalog .catalog_desc {
-  color: rgb(12, 26, 55);
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 33px;
-  text-align: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
 header .header_right .search_wrap, header .header_right .hamburger {
   display: none;
 }
@@ -264,6 +207,62 @@ header .header_right .search_wrap, header .header_right .hamburger {
 }
 .hero .swiper-button-disabled {
   cursor: auto;
+}
+
+.catalog {
+  background-color: #b8cedb;
+}
+.catalog .catalog_block {
+  padding-top: 55px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.catalog .catalog_swiper {
+  padding-bottom: 30px;
+}
+.catalog .swiper_item {
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  padding: 15px 15px 30px 15px;
+  height: 498px;
+  transition: all ease-in 0.2s;
+}
+.catalog .swiper_item:hover {
+  box-shadow: 1px 2px 22px 0px rgba(0, 0, 0, 0.192);
+}
+.catalog .swiper_offer_prev {
+  position: absolute;
+  top: 48%;
+  left: -50px;
+}
+.catalog .swiper_offer_next {
+  right: -50px;
+  position: absolute;
+  top: 48%;
+}
+.catalog .swiper_img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin-bottom: 75px;
+}
+.catalog .swiper_img img {
+  max-width: 307px;
+  max-height: 307px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.catalog .catalog_desc {
+  color: rgb(12, 26, 55);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 33px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .news {
@@ -499,6 +498,9 @@ footer .footer_logo {
   font-weight: 800;
   line-height: 54px;
   margin-bottom: 40px;
+}
+footer .tablet_item {
+  display: none;
 }
 footer .footer_block {
   display: flex;
@@ -742,10 +744,38 @@ a {
   header .header_right .to_tel {
     font-size: 26px;
   }
+  header .header_right .blue_button a {
+    max-width: 257px;
+  }
+  header .header_middle .menus li.has_submenu .submenu {
+    top: calc(100% + 35px);
+  }
+  .img_item {
+    flex: 0 0 auto;
+    width: 47%;
+  }
+  .img_item img {
+    width: 100%;
+  }
+  .swiper_navs {
+    display: none;
+  }
+  .catalog .swiper_img img {
+    width: 100%;
+  }
+  .catalog .catalog_desc {
+    font-size: 24px;
+  }
+  .catalog .swiper_item {
+    height: 430px;
+  }
 }
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  footer .footer_last {
+    gap: 15px;
   }
   header .header_row {
     gap: 40px;
@@ -769,8 +799,7 @@ a {
     max-width: 208px;
   }
   header .header_right .blue_button a {
-    font-size: 18px;
-    max-width: 208px;
+    font-size: 19px;
   }
   .catalog .swiper_img {
     margin-bottom: 35px;
@@ -954,11 +983,80 @@ a {
   header .header_middle .menus .close_menu :hover {
     background: rgb(250, 250, 250);
   }
+  .catalog .catalog_desc {
+    font-size: 20px;
+  }
   .question {
     padding: 35px 0;
   }
+  .footer_last .rule,
+  .footer_last .social_network {
+    display: none;
+  }
+  .subscribe_block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  footer .substr_title {
+    max-width: 175px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+  }
+  footer .subscribe_form input {
+    width: 270px;
+    height: 42px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  footer .subscribe_form input::-moz-placeholder {
+    font-size: 16px;
+  }
+  footer .subscribe_form input::placeholder {
+    font-size: 16px;
+  }
+  footer .tablet_item {
+    max-width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  footer .footer_block {
+    gap: 40px 60px;
+  }
+  footer {
+    padding: 35px 0;
+  }
+  footer .footer_logo {
+    font-size: 26px;
+    line-height: 35px;
+    margin-bottom: 35px;
+  }
+  footer .footer_item_name .blue_button {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  footer .list_title {
+    width: 73px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  footer .footer_navs {
+    gap: 10px;
+  }
+  footer .list_value,
+  footer .footer_navs li a {
+    font-size: 16px;
+    line-height: 22px;
+  }
   .empty {
     height: 80px;
+  }
+  footer .subscribe_form button {
+    padding: 5px 20px;
+    font-size: 16px;
+    height: 42px;
   }
   .question h3 {
     font-size: 32px;
@@ -1057,6 +1155,12 @@ a {
   header .header_right .search_wrap {
     display: none;
   }
+  .subscribe_block {
+    flex-wrap: wrap;
+  }
+  footer .substr_title {
+    max-width: 100%;
+  }
   .company .company_top {
     flex-wrap: wrap;
     gap: 12px 0;
@@ -1119,10 +1223,110 @@ a {
     min-width: 375px;
     max-width: 375px;
   }
+  footer {
+    padding: 20px 0;
+  }
+  footer .footer_logo {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+  footer .footer_item_name {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+  footer .list_title {
+    width: 55px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  footer .list_value,
+  footer .footer_navs li a,
+  footer .rule {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  footer .list_item {
+    gap: 10px;
+  }
+  .footer_item:nth-child(2) {
+    width: 100%;
+  }
+  .footer_item:nth-child(2) .footer_navs {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+  footer .footer_block {
+    gap: 20px;
+  }
+  footer .tablet_item {
+    order: 4;
+  }
+  footer .footer_last {
+    order: 5;
+  }
+  footer .social_title,
+  footer .substr_title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  footer .tablet_item {
+    max-width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .rule {
+    max-width: 165px;
+  }
+  footer .social_network {
+    align-items: center;
+    gap: 15px;
+  }
+  footer .social_network .social_img {
+    margin-left: 4px;
+  }
+  footer .social_network .social_img img {
+    width: 20px;
+  }
+  footer .footer_navs {
+    gap: 8px;
+    max-width: 150px;
+  }
+  footer .subscribe_form input {
+    width: unset;
+    flex-grow: 1;
+    height: 38px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  footer .subscribe_form input::-moz-placeholder {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  footer .subscribe_form input::placeholder {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  footer .subscribe_form button {
+    padding: 5px 30px;
+    font-size: 11px;
+    height: 38px;
+  }
   .question .question_block > .question_input {
     flex-direction: column;
     gap: 8px;
     margin-bottom: 8px;
+  }
+  footer .subscribe_form {
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  footer .substr_title {
+    margin-bottom: 10px;
   }
   .question .orginal_input {
     font-size: 12px;
@@ -1224,7 +1428,7 @@ a {
   .blue_button a,
   .blue_button button {
     width: 157px;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 13px;
   }
   .section_padding {

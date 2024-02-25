@@ -1202,6 +1202,33 @@ a {
   .container {
     max-width: 720px;
   }
+  .breadcrumb_block .breadcrumb li {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .breadcrumb_block .breadcrumb li a {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .breadcrumb_block .breadcrumb li + li:before {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .catalog#catalog_page .swiper_item {
+    height: 315px;
+  }
+  .catalog .catalog_desc {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .catalog#catalog_page .catalog_block {
+    margin-bottom: 60px;
+    padding-top: 15px;
+  }
+  .catalog#catalog_page .catalog_descriptions p {
+    font-size: 16px;
+    line-height: 22px;
+  }
   header .header_row {
     padding: 31px 0;
   }

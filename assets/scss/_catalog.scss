@@ -1,0 +1,33 @@
+#grey_body {
+	background: rgb(245, 245, 245);
+}
+// catalog page
+.catalog#catalog_page {
+	padding: 40px 0 100px 0;
+	background: rgb(245, 245, 245);
+	.catalog_block {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 24px;
+		margin-bottom: 100px;
+	}
+	.swiper_item {
+		cursor: pointer;
+		border: 1px solid rgb(184, 206, 219);
+		border-radius: 10px;
+		flex: 0 0 auto;
+		width: calc(25% - 18px);
+	}
+	.catalog_descriptions {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		p {
+			color: rgb(12, 26, 55);
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 27px;
+		}
+	}
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.08);
   background-color: rgb(184, 206, 219);
@@ -249,11 +250,11 @@ header .header_right .hamburger {
 }
 
 .catalog {
-  padding-top: 10px;
+  padding-top: 130px;
   background-color: #b8cedb;
 }
 .catalog .catalog_block {
-  padding-top: 55px;
+  padding-top: 45px;
   position: relative;
   margin-bottom: 20px;
 }
@@ -667,6 +668,40 @@ footer .social_title {
   line-height: 25px;
 }
 
+#grey_body {
+  background: rgb(245, 245, 245);
+}
+
+.catalog#catalog_page {
+  padding: 40px 0 100px 0;
+  background: rgb(245, 245, 245);
+}
+.catalog#catalog_page .catalog_block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 100px;
+}
+.catalog#catalog_page .swiper_item {
+  cursor: pointer;
+  border: 1px solid rgb(184, 206, 219);
+  border-radius: 10px;
+  flex: 0 0 auto;
+  width: calc(25% - 18px);
+}
+.catalog#catalog_page .catalog_descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.catalog#catalog_page .catalog_descriptions p {
+  color: rgb(12, 26, 55);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -766,6 +801,31 @@ a {
 .swiper_offer_nav i:hover {
   background: rgb(12, 26, 55);
   color: #fff;
+}
+
+.breadcrumb_block {
+  padding-top: 40px;
+}
+.breadcrumb_block .breadcrumb li {
+  display: inline;
+  color: rgba(12, 26, 55, 0.5);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.breadcrumb_block .breadcrumb li + li:before {
+  padding: 10px;
+  color: rgba(12, 26, 55, 0.5);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  content: "/ ";
+}
+.breadcrumb_block .breadcrumb li a {
+  color: rgb(12, 26, 55);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
 }
 
 .container {

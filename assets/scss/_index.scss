@@ -267,7 +267,9 @@ header {
 	#title {
 		transform: translate(0, -4px);
 	}
-
+	.blue_button#mobile_blue {
+		display: none;
+	}
 	.company_top {
 		display: flex;
 		justify-content: space-between;

@@ -52,14 +52,15 @@ $(document).ready(function () {
 
 	const hero_swiper = new Swiper(".hero", {
 		slidesPerView: 1,
+		loop: true,
 		navigation: {
 			nextEl: ".hero .next",
 			prevEl: ".hero .prev",
 		},
-	})
-	$('.hamburger , .close_menu img').click(function(){
-		$('.menus').toggleClass('active')
-	})
+	});
+	$(".hamburger , .close_menu img").click(function () {
+		$(".menus").toggleClass("active");
+	});
 	// catalog swiper
 	const catalog_swiper = new Swiper(".catalog_swiper", {
 		// Default parameters

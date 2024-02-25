@@ -150,7 +150,8 @@ header .header_right .to_tel {
 header .header_right .blue_button a {
   padding: 15.5px 0;
 }
-header .header_right .search_wrap, header .header_right .hamburger {
+header .header_right .search_wrap,
+header .header_right .hamburger {
   display: none;
 }
 
@@ -186,7 +187,8 @@ header .header_right .search_wrap, header .header_right .hamburger {
 .hero .blue_button a {
   text-align: center;
 }
-.hero .prev, .hero .next {
+.hero .prev,
+.hero .next {
   position: absolute;
   top: 50%;
   transform: translate(-50%, 0);
@@ -210,6 +212,7 @@ header .header_right .search_wrap, header .header_right .hamburger {
 }
 
 .catalog {
+  padding-top: 10px;
   background-color: #b8cedb;
 }
 .catalog .catalog_block {
@@ -323,7 +326,7 @@ header .header_right .search_wrap, header .header_right .hamburger {
   padding-bottom: 90px;
 }
 .company #title {
-  transform: translate(0, -4px);
+  transform: translate(0, -16px);
 }
 .company .blue_button#mobile_blue {
   display: none;
@@ -542,6 +545,7 @@ footer .footer_navs {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  list-style: none;
 }
 footer .footer_navs li a {
   color: rgb(250, 250, 250);
@@ -636,6 +640,10 @@ body {
   font-family: "OpenSans", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
 .wrapper {
   overflow: hidden;
 }
@@ -653,12 +661,16 @@ a {
   top: -17px;
   width: 100%;
   text-wrap: nowrap;
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
   display: flex;
+  font-weight: 700;
   justify-content: space-between;
   gap: 55px;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 #title::after,
@@ -776,6 +788,12 @@ a {
   }
   footer .footer_last {
     gap: 15px;
+  }
+  .company #title {
+    transform: translate(0, -4px);
+  }
+  #title {
+    font-size: 30px;
   }
   header .header_row {
     gap: 40px;
@@ -950,7 +968,8 @@ a {
   header .header_right span {
     display: none;
   }
-  header .header_right .search_wrap, header .header_right .hamburger {
+  header .header_right .search_wrap,
+  header .header_right .hamburger {
     display: block;
   }
   header .header_right .to_tel {
@@ -1163,7 +1182,7 @@ a {
   }
   .company .company_top {
     flex-wrap: wrap;
-    gap: 12px 0;
+    gap: 12px 24px;
   }
   .catalog .swiper_item {
     height: auto;

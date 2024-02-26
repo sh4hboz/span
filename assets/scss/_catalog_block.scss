@@ -56,19 +56,197 @@
     justify-content: flex-end;
     gap: 10px;
     margin: 0 0 16px 0;
+    div{
+        cursor: pointer;
+        svg rect{
+            fill-opacity: 0.5;
+        }
+        &.active svg rect{
+            fill-opacity: 1;
+        }
+    }
 }
 .catalog_row{
     display: flex;
     align-items: flex-start;
     gap: 24px;
-    .filter{
-        width: 336px;
-        border: 1px solid #B8CEDB;
-        background-color: #FFFFFF;
-        flex: 0 0 auto;
+    .catalog_right{
+        margin: 0 0 83px 0;
     }
     .catalog_cards{
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
+    }
+}
+.catalog_cards{
+    .catalog_item{
+        display: flex;
+        align-items: center;
+        gap: 49px;
+        width: 100%;
+        padding: 9px 44px 9px 9px;
+        border: 1px solid #B8CEDB;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        text-decoration: none;
+        img{
+            width: 212px;
+            height: 212px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .item_title{
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 41px;
+            color: #0C1A37;
+            margin: 0 0 13px 0;
+        }
+        .item_desc{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #0C1A37;
+        }
+    }
+    &.grid{
+        .catalog_item{
+            width: calc(25% - 18px);
+            flex-direction: column;
+            padding: 19px 9px 44px 9px;
+            gap: 40px;
+            .item_title{
+                margin: 0;
+                font-size: 20px;
+                line-height: 27px;
+                text-align: center;
+            }
+            .item_desc{
+                height: 0;
+                overflow: hidden;
+            }
+            img{
+                padding: 0 8px;
+            }
+        }
+    }
+}
+.filter{
+    width: 336px;
+    border: 1px solid #B8CEDB;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    flex: 0 0 auto;
+    .filter_head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 10px 10px 10px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        color: #0C1A37;
+        div{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .close_filter{
+            display: none;
+        }
+    }
+    .filter_item{
+        padding: 0 16px;
+        border-top: 0.5px solid rgb(12, 26, 55);
+        &.active{
+            padding-bottom: 18px;
+            .filter_title{
+                font-weight: 700;
+                span{
+                    background-color: #0C1A37;
+                    svg{
+                        transform: rotate(180deg);
+                        path{
+                            fill: #FAFAFA;
+                        }
+                    }
+                }
+            }
+        }
+        .filter_title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 17.5px 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19px;
+            color: #0C1A37;
+            cursor: pointer;
+            span{
+                width: 22px;
+                height: 19px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4px 0px 0px 1px;
+                border-radius: 5px;
+                transition: 0.3s all ease;
+                svg{
+                    transition: 0.3s all ease;
+                    path{
+                        fill: #0C1A37;
+                        transition: .3s all ease;
+                    }
+                }
+            }
+            &:hover{
+                font-weight: 700;
+                span{
+                    background-color: #0C1A37;
+                    svg path{
+                       fill: #FAFAFA;
+                    }
+                }   
+            }
+        }
+        .filter_collapse{
+            position: relative;
+            &:has(input[type='checkbox'])::after{
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 4px;
+                border-radius: 5px;
+                right: 8px;
+                top: 0;
+                background-color: #0C1A37;
+            }
+            .nice-select{
+                padding: 0;
+                border-radius: 10px 10px 0px 0px;
+                border: 0.5px solid #B8CEDB;
+                height: auto;
+                .list{
+                    border-radius: 0;
+                    margin: 0;
+                    position: relative;
+                }
+                .option{
+                    padding: 11px 13px;
+                    border: 0.5px solid transparent;
+                    &:hover{
+                        border-color: #B8CEDB;
+                    }
+                }
+            }
+        }
+        .for_checkbox{
+            margin: 0 0 12px 0;
+            &:last-child{
+                margin: 0;
+            }
+        }
     }
 }

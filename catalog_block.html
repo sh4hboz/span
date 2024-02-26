@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/fonts/font.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/libs/nice-select.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Kom span catalog</title>
 </head>
 
-<body id="grey_body">
+<body>
 
     <div class="wrapper">
         <!-- header -->
@@ -156,7 +157,7 @@
                     </div>
                 </div>
                 <div class="change_item">
-                    <div class="grid">
+                    <div class="">
                         <svg width="20.000977" height="20.000000" viewBox="0 0 20.001 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect id="Rectangle 24" width="4.736842" height="5.000000" fill="#0C1A37"
@@ -179,7 +180,7 @@
                                 fill="#0C1A37" fill-opacity="0.500000" />
                         </svg>
                     </div>
-                    <div class="column">
+                    <div class="active">
                         <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect id="Rectangle 24" y="7.428711" width="20.000000" height="5.142857" fill="#0C1A37"
@@ -193,30 +194,209 @@
                 </div>
                 <div class="catalog_row">
                     <div class="filter">
-
+                        <div class="filter_head">
+                            <div>
+                                <img src="assets/images/icon/filter_icon.svg" alt="">
+                                <h3>Фильтр</h3>
+                            </div>
+                            <img class="close_filter" src="assets/images/icon/close_icon.svg" alt="">
+                        </div>
+                        <div class="filter_item active">
+                            <div class="filter_title">
+                                Бренд
+                                <span>
+                                    <svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.709206 1.19246L8.01871 7.34608C8.14709 7.45416 8.31929 7.51465 8.49858 7.51465C8.67787 7.51465 8.85007 7.45416 8.97845 7.34608L16.2907 1.19246C16.3506 1.14211 16.3982 1.08192 16.4307 1.01543C16.4632 0.948938 16.4799 0.877501 16.4799 0.805332C16.4799 0.733163 16.4632 0.661725 16.4307 0.595235C16.3982 0.528746 16.3506 0.468552 16.2907 0.418207C16.1679 0.314631 16.0031 0.256644 15.8315 0.256644C15.6598 0.256644 15.495 0.314631 15.3722 0.418207L8.49858 6.20489L1.62633 0.418207C1.50361 0.314986 1.33907 0.257224 1.16777 0.257224C0.996463 0.257224 0.831927 0.314986 0.709206 0.418207C0.649334 0.468552 0.601747 0.528746 0.569253 0.595235C0.53676 0.661725 0.52002 0.733163 0.52002 0.805332C0.52002 0.877501 0.53676 0.948938 0.569253 1.01543C0.601747 1.08192 0.649334 1.14211 0.709206 1.19246Z"
+                                            fill="#0C1A37" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="filter_collapse">
+                                <label class="for_checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Бренд</p>
+                                </label>
+                                <label class="for_checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    <p>Бренд</p>
+                                </label>
+                                <label class="for_checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Бренд</p>
+                                </label>
+                                <label class="for_checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Бренд</p>
+                                </label>
+                                <label class="for_checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Бренд</p>
+                                </label>
+                                <label class="for_checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p>Бренд</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter_item">
+                            <div class="filter_title">
+                                Производитель
+                                <span>
+                                    <svg width="17" height="8" viewBox="0 0 17 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.709206 1.19246L8.01871 7.34608C8.14709 7.45416 8.31929 7.51465 8.49858 7.51465C8.67787 7.51465 8.85007 7.45416 8.97845 7.34608L16.2907 1.19246C16.3506 1.14211 16.3982 1.08192 16.4307 1.01543C16.4632 0.948938 16.4799 0.877501 16.4799 0.805332C16.4799 0.733163 16.4632 0.661725 16.4307 0.595235C16.3982 0.528746 16.3506 0.468552 16.2907 0.418207C16.1679 0.314631 16.0031 0.256644 15.8315 0.256644C15.6598 0.256644 15.495 0.314631 15.3722 0.418207L8.49858 6.20489L1.62633 0.418207C1.50361 0.314986 1.33907 0.257224 1.16777 0.257224C0.996463 0.257224 0.831927 0.314986 0.709206 0.418207C0.649334 0.468552 0.601747 0.528746 0.569253 0.595235C0.53676 0.661725 0.52002 0.733163 0.52002 0.805332C0.52002 0.877501 0.53676 0.948938 0.569253 1.01543C0.601747 1.08192 0.649334 1.14211 0.709206 1.19246Z"
+                                            fill="#0C1A37" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="filter_collapse">
+                                <select class="wide">
+                                    <option>Все</option>
+                                    <option>Производитель</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="catalog_cards">
-                        <a href="#" class="catalog_item">
-                            <img src="assets/images/special_offer_img.png" alt="">
-                            <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
-                            <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP Nanex™
-                                multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и контролируемая
-                                имплантация ИОЛ с помощью предустановленного устройства HOYA Nanex™…</p>
-                        </a>
+                    <div class="catalog_right">
+                        <div class="catalog_cards">
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                            <a href="#" class="catalog_item">
+                                <img src="assets/images/special_offer_img.png" alt="">
+                                <div>
+                                    <h3 class="item_title">Nanex™ multiSert+™ Наименование товара</h3>
+                                    <p class="item_desc">Малоинвазивная хирургия катаракты модель NC1-SP модель NY1-SP
+                                        Nanex™ multiSert+™ Описание Характеристики ИОЛ Материалы Описание Высокоточная и
+                                        контролируемая имплантация ИОЛ с помощью предустановленного устройства HOYA
+                                        Nanex™…</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="catalog_descriptions">
+                            <p>Таким образом задача нашей проверки количественный показывает, и место по высшего а
+                                модель
+                                образом намеченных новая намеченных финансовых развития. Интересный организации задания
+                                организации, собой также рамки активности условий требуют организационной позиций,
+                                соображения
+                                рост разработке соображения анализа проверки активности модель и позволяет
+                                организационной
+                                развития.
+                            </p>
+                            <p>
+                                Заданий направлений деятельности задача от активности повседневная сложившаяся задания
+                                развития.
+                                Рамки финансовых соображения интересный поставленных отношении особенности направлений
+                                подготовки повседневная и сфера позиций, задача количественный организации.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="catalog_descriptions">
-                    <p>Таким образом задача нашей проверки количественный показывает, и место по высшего а модель
-                        образом намеченных новая намеченных финансовых развития. Интересный организации задания
-                        организации, собой также рамки активности условий требуют организационной позиций, соображения
-                        рост разработке соображения анализа проверки активности модель и позволяет организационной
-                        развития.
-                    </p>
-                    <p>
-                        Заданий направлений деятельности задача от активности повседневная сложившаяся задания развития.
-                        Рамки финансовых соображения интересный поставленных отношении особенности направлений
-                        подготовки повседневная и сфера позиций, задача количественный организации.
-                    </p>
                 </div>
             </form>
         </section>
@@ -335,7 +515,7 @@
                         </label>
                     </div>
                     <div class="form_actions">
-                        <label>
+                        <label class="for_checkbox">
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             <p>Я даю свое согласие на обработку персональных данных и соглашаюсь с <a href="#">политикой
@@ -358,6 +538,7 @@
     <script src="assets/libs/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="assets/libs/jquery-validate-1_19_5.js"></script>
+    <script src="assets/libs/jquery.nice-select.min.js"></script>
     <!-- JS -->
     <script src="assets/js/scripts.js"></script>
 </body>

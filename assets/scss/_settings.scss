@@ -5,7 +5,7 @@
 }
 body {
 	font-family: "OpenSans", sans-serif;
-	background: rgb(184, 206, 219);
+	background-color: #FAFAFA;
 }
 ul {
 	list-style: none;
@@ -78,7 +78,17 @@ a {
 .section_padding {
 	padding-bottom: 130px;
 }
-
+main.index{
+	background-color: #B8CEDB;
+	padding-bottom: 130px;
+}
+main.index section{
+	margin-top: 130px;
+	&:first-child{
+		margin-top: 0;
+		padding-top: 130px;
+	}
+}
 // swiper nav
 .swiper_offer_nav {
 	i {

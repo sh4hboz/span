@@ -116,6 +116,18 @@
 			}
 		}
 	}
+	.hero{
+		padding: 300px 0 260px 0;
+	}
+	main.index section:first-child{
+		padding-top: 100px;
+	}
+	main.index section {
+		margin-top: 100px;
+	}
+	main.index{
+		padding-bottom: 100px;
+	}
 	.hero .swiper{
 		padding: 0 43px;
 	}
@@ -161,6 +173,9 @@
 	}
 	.container {
 		max-width: 720px;
+	}
+	header .header_middle .menus li:hover::after {
+		display: none;
 	}
 	.breadcrumb_block .breadcrumb li {
 		font-size: 16px;
@@ -347,8 +362,7 @@
 		}
 	}
 	.hero {
-		padding: 250px 0;
-		margin: 0 0 60px 0;
+		padding: 250px 0 200px 0;
 	}
 	.hero .next svg,
 	.hero .prev svg {
@@ -473,12 +487,6 @@
 	.special_offers .offer_block {
 		padding-top: 20px;
 	}
-	.special_offers {
-		padding: 80px 0 0 0;
-	}
-	.special_offers .offer_swiper {
-		padding-bottom: 80px;
-	}
 	.company {
 		padding-bottom: 50px;
 	}
@@ -578,6 +586,18 @@
 	}
 }
 @media (max-width: 768px) {
+	.hero{
+		padding: 150px 0;
+	}
+	main.index section:first-child{
+		padding-top: 50px;
+	}
+	main.index section {
+		margin-top: 80px;
+	}
+	main.index{
+		padding-bottom: 80px;
+	}
 	header {
 		.header_right {
 			.search_wrap {
@@ -606,9 +626,6 @@
 	.catalog#catalog_page .swiper_item {
 		width: 47%;
 		height: 345px;
-	}
-	.hero {
-		margin: 0 0 50px 0;
 	}
 	.subscribe_block {
 		flex-wrap: wrap;
@@ -690,7 +707,15 @@
 	}
 	.hero {
 		padding: 42px 0 69px 0;
-		margin: 0 0 16px 0;
+	}
+	main.index section:first-child{
+		padding-top: 16px;
+	}
+	main.index section {
+		margin-top: 35px;
+	}
+	main.index{
+		padding-bottom: 35px;
 	}
 	.hero h1 {
 		font-size: 22px;
@@ -780,6 +805,7 @@
 		height: 38px;
 		font-size: 12px;
 		line-height: 16px;
+		border-radius: 7px;
 		&::placeholder {
 			font-size: 12px;
 			line-height: 16px;
@@ -789,6 +815,7 @@
 		padding: 5px 30px;
 		font-size: 11px;
 		height: 38px;
+		border-radius: 7px;
 	}
 	.question .question_block > .question_input {
 		flex-direction: column;
@@ -807,15 +834,14 @@
 		font-size: 12px;
 		line-height: 16px;
 		padding: 10px 16px;
+		border-radius: 5px;
 	}
 	.question .question_block > textarea {
 		font-size: 12px;
 		line-height: 16px;
 		padding: 10px 16px;
 		min-height: 130px;
-	}
-	.empty {
-		height: 35px;
+		border-radius: 5px;
 	}
 	.question h3 {
 		font-size: 22px;
@@ -838,19 +864,12 @@
 		font-size: 14px;
 		line-height: 19px;
 	}
-	.special_offers {
-		padding: 40px 0 0 0;
-	}
 	#swiper_container.container {
 		padding: 0;
 		padding-left: 18px;
 	}
 	#news_container.container {
 		padding: 0;
-	}
-
-	.special_offers .offer_swiper {
-		padding-bottom: 40px;
 	}
 	.company .company_block {
 		margin-bottom: 25px;
@@ -911,6 +930,7 @@
 		width: 157px;
 		padding: 5px 0;
 		font-size: 13px;
+		border-radius: 8px;
 	}
 	.section_padding {
 		padding-bottom: 40px;

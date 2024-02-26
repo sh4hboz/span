@@ -39,18 +39,28 @@ header .header_middle .menus li {
   position: relative;
   transition: 0.3s all ease-out;
 }
+header .header_middle .menus li::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #0C1A37;
+  transition: 0.3s all ease-out;
+}
+header .header_middle .menus li:hover::after {
+  width: 100%;
+}
 header .header_middle .menus li:hover {
   -webkit-text-stroke: 1px rgb(12, 26, 55);
-}
-header .header_middle .menus li.has_submenu {
-  border-bottom: 3px solid transparent;
 }
 header .header_middle .menus li.has_submenu .submenu {
   display: flex;
   flex-direction: column;
   position: absolute;
   left: 0;
-  top: calc(100% + 30px);
+  top: calc(100% + 27px);
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -73,6 +83,9 @@ header .header_middle .menus li.has_submenu .submenu li {
   height: 66px;
   padding: 8px 16px 8px 16px;
   border-top: 1px solid rgb(141, 161, 178);
+}
+header .header_middle .menus li.has_submenu .submenu li::after {
+  display: none;
 }
 header .header_middle .menus li.has_submenu .submenu li:first-child {
   border: none;
@@ -162,7 +175,6 @@ header .header_right .hamburger {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0 0 130px 0;
   position: relative;
   z-index: 1;
 }
@@ -418,15 +430,11 @@ header .header_right .hamburger {
 }
 
 .special_offers {
-  padding: 130px 0 0 0;
   background-color: #b8cedb;
 }
 .special_offers .offer_block {
   padding-top: 40px;
   position: relative;
-}
-.special_offers .offer_swiper {
-  padding-bottom: 130px;
 }
 .special_offers .swiper_offer_prev {
   position: absolute;
@@ -464,8 +472,7 @@ header .header_right .hamburger {
 
 .question {
   padding: 60px 0;
-  background-image: url("/assets/images/question_bg.png");
-  background-repeat: no-repeat;
+  background: url(../images/company_bg.png) no-repeat;
   background-size: cover;
 }
 .question h3 {
@@ -885,6 +892,86 @@ footer .social_title {
   line-height: 27px;
 }
 
+.subsection_row {
+  display: flex;
+  gap: 24px;
+  margin: 50px 0 40px 0;
+}
+.subsection_row .subsection {
+  width: calc(25% - 18px);
+  padding: 21px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 35px;
+  color: #0C1A37;
+}
+.subsection_row .subsection img {
+  width: 91px;
+  height: 99px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 43px 0;
+}
+.sort .sort_items {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.sort label {
+  position: relative;
+  padding: 5.5px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  border-radius: 5px;
+  transition: 0.3s all ease-out;
+  color: #0C1A37;
+  cursor: pointer;
+}
+.sort label input {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.sort label:hover {
+  box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1);
+  background: rgb(196, 215, 226);
+}
+
+.change_item {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0 0 16px 0;
+}
+
+.catalog_row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.catalog_row .filter {
+  width: 336px;
+  border: 1px solid #B8CEDB;
+  background-color: #FFFFFF;
+  flex: 0 0 auto;
+}
+.catalog_row .catalog_cards {
+  display: flex;
+  gap: 24px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -893,7 +980,7 @@ footer .social_title {
 
 body {
   font-family: "OpenSans", sans-serif;
-  background: rgb(184, 206, 219);
+  background-color: #FAFAFA;
 }
 
 ul {
@@ -970,6 +1057,19 @@ a {
 
 .section_padding {
   padding-bottom: 130px;
+}
+
+main.index {
+  background-color: #B8CEDB;
+  padding-bottom: 130px;
+}
+
+main.index section {
+  margin-top: 130px;
+}
+main.index section:first-child {
+  margin-top: 0;
+  padding-top: 130px;
 }
 
 .swiper_offer_nav i {
@@ -1165,6 +1265,18 @@ a {
   header .header_right .blue_button a {
     font-size: 19px;
   }
+  .hero {
+    padding: 300px 0 260px 0;
+  }
+  main.index section:first-child {
+    padding-top: 100px;
+  }
+  main.index section {
+    margin-top: 100px;
+  }
+  main.index {
+    padding-bottom: 100px;
+  }
   .hero .swiper {
     padding: 0 43px;
   }
@@ -1210,6 +1322,9 @@ a {
   }
   .container {
     max-width: 720px;
+  }
+  header .header_middle .menus li:hover::after {
+    display: none;
   }
   .breadcrumb_block .breadcrumb li {
     font-size: 16px;
@@ -1388,8 +1503,7 @@ a {
     width: calc(33% - 14px);
   }
   .hero {
-    padding: 250px 0;
-    margin: 0 0 60px 0;
+    padding: 250px 0 200px 0;
   }
   .hero .next svg,
   .hero .prev svg {
@@ -1514,12 +1628,6 @@ a {
   .special_offers .offer_block {
     padding-top: 20px;
   }
-  .special_offers {
-    padding: 80px 0 0 0;
-  }
-  .special_offers .offer_swiper {
-    padding-bottom: 80px;
-  }
   .company {
     padding-bottom: 50px;
   }
@@ -1615,6 +1723,18 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .hero {
+    padding: 150px 0;
+  }
+  main.index section:first-child {
+    padding-top: 50px;
+  }
+  main.index section {
+    margin-top: 80px;
+  }
+  main.index {
+    padding-bottom: 80px;
+  }
   header .header_right .search_wrap {
     display: none;
   }
@@ -1639,9 +1759,6 @@ a {
   .catalog#catalog_page .swiper_item {
     width: 47%;
     height: 345px;
-  }
-  .hero {
-    margin: 0 0 50px 0;
   }
   .subscribe_block {
     flex-wrap: wrap;
@@ -1711,7 +1828,15 @@ a {
   }
   .hero {
     padding: 42px 0 69px 0;
-    margin: 0 0 16px 0;
+  }
+  main.index section:first-child {
+    padding-top: 16px;
+  }
+  main.index section {
+    margin-top: 35px;
+  }
+  main.index {
+    padding-bottom: 35px;
   }
   .hero h1 {
     font-size: 22px;
@@ -1801,6 +1926,7 @@ a {
     height: 38px;
     font-size: 12px;
     line-height: 16px;
+    border-radius: 7px;
   }
   footer .subscribe_form input::-moz-placeholder {
     font-size: 12px;
@@ -1814,6 +1940,7 @@ a {
     padding: 5px 30px;
     font-size: 11px;
     height: 38px;
+    border-radius: 7px;
   }
   .question .question_block > .question_input {
     flex-direction: column;
@@ -1832,15 +1959,14 @@ a {
     font-size: 12px;
     line-height: 16px;
     padding: 10px 16px;
+    border-radius: 5px;
   }
   .question .question_block > textarea {
     font-size: 12px;
     line-height: 16px;
     padding: 10px 16px;
     min-height: 130px;
-  }
-  .empty {
-    height: 35px;
+    border-radius: 5px;
   }
   .question h3 {
     font-size: 22px;
@@ -1863,18 +1989,12 @@ a {
     font-size: 14px;
     line-height: 19px;
   }
-  .special_offers {
-    padding: 40px 0 0 0;
-  }
   #swiper_container.container {
     padding: 0;
     padding-left: 18px;
   }
   #news_container.container {
     padding: 0;
-  }
-  .special_offers .offer_swiper {
-    padding-bottom: 40px;
   }
   .company .company_block {
     margin-bottom: 25px;
@@ -1935,6 +2055,7 @@ a {
     width: 157px;
     padding: 5px 0;
     font-size: 13px;
+    border-radius: 8px;
   }
   .section_padding {
     padding-bottom: 40px;

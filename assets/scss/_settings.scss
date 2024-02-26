@@ -47,6 +47,9 @@ a {
 
 .blue_button {
 	text-align: center;
+	&#left {
+		display: inline-block;
+	}
 	a,
 	button {
 		align-items: center;
@@ -57,7 +60,7 @@ a {
 		font-size: 22px;
 		font-weight: 700;
 		line-height: 30px;
-		padding: 21px 0;
+		padding: 20px 0;
 		width: 302px;
 		display: inline-block;
 		border: 2px solid transparent;

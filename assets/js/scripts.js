@@ -1,15 +1,4 @@
 $(document).ready(function () {
-	// hamburger
-	$(".hamurger_menu").on("click", function (e) {
-		e.preventDefault();
-		$(".header_menus").addClass("active");
-	});
-
-	$(".close").on("click", function (e) {
-		e.preventDefault();
-		$(".header_menus").removeClass("active");
-	});
-
 	// special offer swiper
 	const offer_swiper = new Swiper(".offer_swiper", {
 		// Default parameters
@@ -141,10 +130,50 @@ $(document).ready(function () {
 			},
 		});
 	}
-});
 
-const element = document.querySelector(".tel");
-const maskOptions = {
-	mask: "+{7} 000 000 00 00",
-};
-const mask = IMask(element, maskOptions);
+	const element = document.querySelector(".tel");
+	const maskOptions = {
+		mask: "+{7} 000 000 00 00",
+	};
+	const mask = IMask(element, maskOptions);
+
+	// thumb swiper
+	var swiper = new Swiper(".mySwiper", {
+		loop: true,
+		direction: "vertical",
+		spaceBetween: 20,
+		slidesPerView: 4,
+		allowTouchMove: false,
+		mousewheel: true,
+	});
+	var swiper2 = new Swiper(".mySwiper2", {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: ".swiper_card_next",
+			prevEl: ".swiper_card_prev",
+		},
+		thumbs: {
+			swiper: swiper,
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
+
+	// card_product tab
+	// detail tab content
+	$(".tab_content:first").show();
+	$(".tab_navigation li:first").addClass("active");
+
+	$(".tab_navigation li").click(function (event) {
+		event.preventDefault();
+		index = $(this).index();
+		$(".tab_navigation li").removeClass("active");
+		$(this).addClass("active");
+		$(".tab_content").hide();
+		$(".tab_content").eq(index).show();
+	});
+});

@@ -171,5 +171,7 @@ const mask = IMask(element, maskOptions);
 		$(this).siblings().slideToggle(300)
 	})
 	$('.filter_item .filter_collapse:not(.active .filter_collapse)').slideUp(0)
-	$('.filter_collapse select').niceSelect();
+	if($('.filter_collapse').length > 0){
+		$('.filter_collapse select').niceSelect();
+	}
 

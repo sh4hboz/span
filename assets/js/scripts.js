@@ -125,37 +125,40 @@ $(document).ready(function () {
 		});
 	}
 
-	$('header .blue_button').click(function(e){
-		$('body').addClass('open_modal modal1_active')
-	})
-	$('.modal_back .for_close , .modal .close_modal').click(function(e){
-		$('body').removeClass('open_modal modal1_active modal2_active')
-	})
-
-	if($('#order_form').length != 0){
-		$('#order_form').validate({
-		  rules:{
-			name:{
-			  required: true,
-			},
-			tel:{
-			  required: true,
-			  minlength: 12,
-			}
-		  },
-		  submitHandler: function(form) { 
-			$('body').removeClass('modal1_active')
-			$('body').addClass('modal2_active')
-			
-			return false;
-		}
-		})
-	  }
+	$("header .blue_button").click(function (e) {
+		e.preventDefault();
+		$("body").addClass("open_modal modal1_active");
+	});
+	$(".modal_back .for_close , .modal .close_modal").click(function (e) {
+		$("body").removeClass("open_modal modal1_active modal2_active");
 	});
 
-	if($("input[type='tel']").length !==0){
-		$("input[type='tel']").inputmask("+7 999 999 99 99 ",{clearMaskOnLostFocus: true,});
+	if ($("#order_form").length != 0) {
+		$("#order_form").validate({
+			rules: {
+				name: {
+					required: true,
+				},
+				tel: {
+					required: true,
+					minlength: 12,
+				},
+			},
+			submitHandler: function (form) {
+				$("body").removeClass("modal1_active");
+				$("body").addClass("modal2_active");
+
+				return false;
+			},
+		});
 	}
+});
+
+const element = document.querySelector(".tel");
+const maskOptions = {
+	mask: "+{7} 000 000 00 00",
+};
+const mask = IMask(element, maskOptions);
 
 	$('.change_item div').click(function(){
 		$(this).toggleClass('active')

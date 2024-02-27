@@ -148,37 +148,41 @@ $(document).ready(function () {
 	const mask = IMask(element, maskOptions);
 
 	// thumb swiper
-	var swiper = new Swiper(".mySwiper", {
-		loop: true,
-		direction: "vertical",
-		spaceBetween: 20,
-		slidesPerView: 4,
-		allowTouchMove: false,
-		mousewheel: true,
-	});
-	var swiper2 = new Swiper(".mySwiper2", {
-		loop: true,
-		spaceBetween: 10,
-		slidesPerView: 1,
-		navigation: {
-			nextEl: ".swiper_card_next",
-			prevEl: ".swiper_card_prev",
-		},
-		thumbs: {
-			swiper: swiper,
-		},
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		},
-	});
+	if ($('.mySwiper').length > 0) {
+		var swiper = new Swiper(".mySwiper", {
+			loop: true,
+			direction: "vertical",
+			spaceBetween: 20,
+			slidesPerView: 4,
+			allowTouchMove: false,
+			mousewheel: true,
+		});
+		var swiper2 = new Swiper(".mySwiper2", {
+			loop: true,
+			spaceBetween: 10,
+			slidesPerView: 1,
+			navigation: {
+				nextEl: ".swiper_card_next",
+				prevEl: ".swiper_card_prev",
+			},
+			thumbs: {
+				swiper: swiper,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+		});	
+	}
 
 	$('.filter_title').click(function(){
 		$(this).parent().toggleClass('active')
 		$(this).siblings().slideToggle(300)
 	})
 	$('.filter_item .filter_collapse:not(.active .filter_collapse)').slideUp(0)
-	$('.filter_collapse select').niceSelect();
+	if($('.filter_collapse').length > 0){
+		$('.filter_collapse select').niceSelect();
+	}
 
 	$(".tab_navigation li").click(function (event) {
 		event.preventDefault();
@@ -188,4 +192,33 @@ $(document).ready(function () {
 		$(".tab_content").hide();
 		$(".tab_content").eq(index).show();
 	});
+
+	if($('#double_slider').length > 0){
+		$("#double_slider").ionRangeSlider({
+		  min: 0,
+		  max: 20000,
+		  type: "double",
+		  from: 0,
+		  to: 20000,
+		});
+
+		$('#double_slider').change(function(){
+			val1 = $('.irs-from').text().replace(' ','')
+			val2 = $('.irs-to').text().replace(' ','')
+			$('.input_wrap input:first-child').val(val1)
+			$('.input_wrap input:last-child').val(val2)
+		})
+	}
+	$('.change_item div').click(function(){
+		$(this).toggleClass('active')
+		$(this).siblings().toggleClass('active')
+		$('.catalog_cards').toggleClass('grid')
+	})
+
+	$('.open_filter').click(function(){
+		$('.filter').toggleClass('active')
+	})
+	$('.filter .close_filter').click(function(){
+		$('.filter').removeClass('active')
+	})
 });

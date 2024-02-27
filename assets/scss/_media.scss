@@ -35,7 +35,7 @@
 		}
 	}
 	header .header_middle .menus li.has_submenu .submenu {
-		top: calc(100% + 35px);
+		top: calc(100% + 33px);
 	}
 	.partner_img img {
 		width: 100%;
@@ -349,6 +349,9 @@
 	.contacts .contacts_row .contact_item a{
 		font-size: 20px;
 		line-height: 25px;
+	}
+	header .header_middle .menus li.has_submenu .submenu {
+		top: calc(100% + 26px);
 	}
 }
 @media (max-width: 992px) {
@@ -1272,6 +1275,10 @@
 	.contacts .contacts_row .contact_item a {
 		font-size: 16px;
 		line-height: 22px;
+	}
+	.hero h1 {
+		font-size: 32px;
+		line-height: 42px;
 	}
 }
 @media (max-width: 576px) {

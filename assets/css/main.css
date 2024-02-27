@@ -875,6 +875,8 @@ footer .social_title {
   font-weight: 600;
   line-height: 35px;
   color: #0C1A37;
+  transition: 0.3s all ease-out;
+  border-radius: 10px;
 }
 .subsection_row .subsection img {
   width: 91px;
@@ -883,6 +885,9 @@ footer .social_title {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+.subsection_row .subsection:hover {
+  box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1);
 }
 
 .sort {
@@ -2281,7 +2286,7 @@ textarea:focus) span {
     font-size: 20px;
   }
   header .header_middle .menus li.has_submenu .submenu {
-    top: calc(100% + 35px);
+    top: calc(100% + 33px);
   }
   .partner_img img {
     width: 100%;
@@ -2577,6 +2582,9 @@ textarea:focus) span {
   .contacts .contacts_row .contact_item a {
     font-size: 20px;
     line-height: 25px;
+  }
+  header .header_middle .menus li.has_submenu .submenu {
+    top: calc(100% + 26px);
   }
 }
 @media (max-width: 992px) {
@@ -3474,6 +3482,10 @@ textarea:focus) span {
   .contacts .contacts_row .contact_item a {
     font-size: 16px;
     line-height: 22px;
+  }
+  .hero h1 {
+    font-size: 32px;
+    line-height: 42px;
   }
 }
 @media (max-width: 576px) {

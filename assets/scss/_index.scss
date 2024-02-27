@@ -36,19 +36,19 @@ header {
 				justify-content: space-between;
 				cursor: pointer;
 				position: relative;
-				transition: .3s all ease-out;
-				&::after{
+				transition: 0.3s all ease-out;
+				&::after {
 					position: absolute;
-					content: '';
+					content: "";
 					width: 0;
 					height: 3px;
 					bottom: 0;
 					left: 0;
-					background-color: #0C1A37;
-					transition: .3s all ease-out;
+					background-color: #0c1a37;
+					transition: 0.3s all ease-out;
 				}
-				&:hover{
-					&::after{
+				&:hover {
+					&::after {
 						width: 100%;
 					}
 				}
@@ -84,7 +84,7 @@ header {
 				height: 66px;
 				padding: 8px 16px 8px 16px;
 				border-top: 1px solid rgb(141, 161, 178);
-				&::after{
+				&::after {
 					display: none;
 				}
 			}
@@ -379,25 +379,11 @@ header {
 }
 
 // company
-.company {
-	background: url(../images/company_bg.png) no-repeat;
-	background-size: cover;
-	padding-bottom: 90px;
-	#title {
-		transform: translate(0, -16px);
-	}
-	.blue_button#mobile_blue {
-		display: none;
-	}
-	.company_top {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 40px;
-	}
-	.blue_button#left_side {
-		display: inline-block;
-	}
+.company_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
 	.company_count {
 		color: rgb(12, 26, 55);
 		font-size: 80px;
@@ -413,6 +399,22 @@ header {
 		letter-spacing: 0%;
 		margin-top: -5px;
 	}
+}
+.company {
+	background: url(../images/company_bg.png) no-repeat;
+	background-size: cover;
+	padding-bottom: 90px;
+	#title {
+		transform: translate(0, -16px);
+	}
+	.blue_button#mobile_blue {
+		display: none;
+	}
+
+	.blue_button#left_side {
+		display: inline-block;
+	}
+
 	.company_block {
 		display: flex;
 		gap: 65px;
@@ -681,7 +683,7 @@ footer {
 	}
 }
 // MODALS
-.modal_back{
+.modal_back {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -691,10 +693,10 @@ footer {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	transition: .3s all ease-out;
+	transition: 0.3s all ease-out;
 	visibility: hidden;
 	opacity: 0;
-	.modal{
+	.modal {
 		position: absolute;
 		padding: 70px;
 		max-width: 936px;
@@ -712,18 +714,18 @@ footer {
 		visibility: hidden;
 		opacity: 0;
 		overflow: auto;
-		&.modal2{
-			.modal_title{
+		&.modal2 {
+			.modal_title {
 				text-align: center;
 			}
 		}
-		.modal_title{
+		.modal_title {
 			font-size: 50px;
 			font-weight: 700;
 			line-height: 68px;
 			color: rgb(12, 26, 55);
 		}
-		.close_modal{
+		.close_modal {
 			position: absolute;
 			right: 27px;
 			top: 27px;
@@ -732,13 +734,13 @@ footer {
 			padding: 10px;
 			cursor: pointer;
 		}
-		.blue_button{
-			button{
+		.blue_button {
+			button {
 				padding: 19px 0;
 			}
 		}
 	}
-	.for_close{
+	.for_close {
 		width: 100%;
 		height: 100%;
 		position: absolute;
@@ -747,13 +749,13 @@ footer {
 		z-index: 1;
 	}
 }
-.open_modal{
+.open_modal {
 	overflow: hidden;
-	.modal_back{
+	.modal_back {
 		opacity: 1;
 		visibility: visible;
 		z-index: 3;
-		.for_close{
+		.for_close {
 			background: rgba(12, 26, 55, 0.5);
 		}
 	}
@@ -761,13 +763,13 @@ footer {
 		overflow: visible;
 	}
 }
-.open_modal.modal1_active .modal1{
+.open_modal.modal1_active .modal1 {
 	position: relative;
 	height: auto;
 	opacity: 1;
 	visibility: visible;
 }
-.open_modal.modal2_active .modal2{
+.open_modal.modal2_active .modal2 {
 	position: relative;
 	height: auto;
 	opacity: 1;
@@ -777,41 +779,41 @@ footer {
 	align-items: center;
 	justify-content: center;
 }
-.modal{
-	form{
+.modal {
+	form {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 32px;
 	}
-	.inputs{
+	.inputs {
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
 		width: 100%;
 	}
-	label{
+	label {
 		position: relative;
-		&.error{
+		&.error {
 			display: none !important;
 		}
 	}
-	.form_actions{
+	.form_actions {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 50px;
-		.blue_button{
+		.blue_button {
 			width: 100%;
 			align-items: center;
 			text-align: center;
 		}
-		.for_checkbox{
+		.for_checkbox {
 			gap: 16px;
-			.checkmark{
+			.checkmark {
 				width: 28px;
 				height: 28px;
-				&::after{
+				&::after {
 					width: 13px;
 					height: 8px;
 				}

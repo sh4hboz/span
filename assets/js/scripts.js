@@ -98,6 +98,89 @@ $(document).ready(function () {
 		});
 	}
 
+	// activity swiper
+	if ($(".swiper_activity").length > 0) {
+		const swiper_activity = new Swiper(".swiper_activity", {
+			// Default parameters
+			slidesPerView: 2,
+			centeredSlides: true,
+			spaceBetween: 24,
+			loop: true,
+			grabCursor: true,
+			// autoplay: {
+			// 	delay: 2000,
+			// },
+			navigation: {
+				nextEl: ".swiper_offer_next",
+				prevEl: ".swiper_offer_prev",
+			},
+			pagination: {
+				el: ".company_swiper_pagination",
+				clickable: true,
+			},
+			// Responsive breakpoints
+			breakpoints: {
+				// when window width is >= 320px
+				320: {
+					slidesPerView: 1.2,
+					spaceBetween: 10,
+				},
+				// when window width is >= 640px
+				577: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+				},
+				769: {
+					slidesPerView: 1.5,
+					spaceBetween: 10,
+				},
+				992: {
+					slidesPerView: 2.1,
+					spaceBetween: 24,
+				},
+			},
+		});
+	}
+
+	// partner_swiper
+	if ($(".partner_swiper").length > 0) {
+		const partner_swiper = new Swiper(".partner_swiper", {
+			// Default parameters
+			slidesPerView: 4,
+			spaceBetween: 38,
+			loop: true,
+			grabCursor: true,
+			// autoplay: {
+			// 	delay: 2000,
+			// },
+			navigation: {
+				nextEl: ".partner_next",
+				prevEl: ".partner_prev",
+			},
+			// Responsive breakpoints
+			breakpoints: {
+				// when window width is >= 320px
+				320: {
+					slidesPerView: 4,
+					spaceBetween: 7,
+				},
+				// when window width is >= 640px
+				577: {
+					slidesPerView: 4,
+					spaceBetween: 10,
+				},
+				769: {
+					slidesPerView: 4,
+					spaceBetween: 18,
+				},
+				1201: {
+					slidesPerView: 4,
+					spaceBetween: 38,
+				},
+			},
+		});
+	}
+
 	// news mobile swiper
 	if ($(".news_swiper").length > 0) {
 		const news_swiper = new Swiper(".news_swiper", {
@@ -148,7 +231,7 @@ $(document).ready(function () {
 	const mask = IMask(element, maskOptions);
 
 	// thumb swiper
-	if ($('.mySwiper').length > 0) {
+	if ($(".mySwiper").length > 0) {
 		var swiper = new Swiper(".mySwiper", {
 			loop: true,
 			direction: "vertical",
@@ -172,18 +255,18 @@ $(document).ready(function () {
 				el: ".swiper-pagination",
 				clickable: true,
 			},
-		});	
+		});
 	}
 
-	$('.filter_title').click(function(){
-		$(this).parent().toggleClass('active')
-		$(this).siblings().slideToggle(300)
-	})
-	$('.filter_item .filter_collapse:not(.active .filter_collapse)').slideUp(0)
-	if($('.filter_collapse').length > 0){
-		$('.filter_collapse select').niceSelect();
+	$(".filter_title").click(function () {
+		$(this).parent().toggleClass("active");
+		$(this).siblings().slideToggle(300);
+	});
+	$(".filter_item .filter_collapse:not(.active .filter_collapse)").slideUp(0);
+	if ($(".filter_collapse").length > 0) {
+		$(".filter_collapse select").niceSelect();
 	}
-
+	$(".tab_content:first").show();
 	$(".tab_navigation li").click(function (event) {
 		event.preventDefault();
 		index = $(this).index();
@@ -193,33 +276,33 @@ $(document).ready(function () {
 		$(".tab_content").eq(index).show();
 	});
 
-	if($('#double_slider').length > 0){
+	if ($("#double_slider").length > 0) {
 		$("#double_slider").ionRangeSlider({
-		  min: 0,
-		  max: 20000,
-		  type: "double",
-		  from: 0,
-		  to: 20000,
+			min: 0,
+			max: 20000,
+			type: "double",
+			from: 0,
+			to: 20000,
 		});
 
-		$('#double_slider').change(function(){
-			val1 = $('.irs-from').text().replace(' ','')
-			val2 = $('.irs-to').text().replace(' ','')
-			$('.input_wrap input:first-child').val(val1)
-			$('.input_wrap input:last-child').val(val2)
-		})
+		$("#double_slider").change(function () {
+			val1 = $(".irs-from").text().replace(" ", "");
+			val2 = $(".irs-to").text().replace(" ", "");
+			$(".input_wrap input:first-child").val(val1);
+			$(".input_wrap input:last-child").val(val2);
+		});
 	}
-	$('.change_item div').click(function(){
-		$(this).toggleClass('active')
-		$(this).siblings().toggleClass('active')
-		$('.catalog_cards').toggleClass('grid')
-	})
+	$(".change_item div").click(function () {
+		$(this).toggleClass("active");
+		$(this).siblings().toggleClass("active");
+		$(".catalog_cards").toggleClass("grid");
+	});
 
-	$('.open_filter').click(function(){
+	$(".open_filter").click(function () {
 		$("body").toggleClass("open_modal");
-		$('.filter').toggleClass('active')
-	})
-	$('.filter .close_filter , .for_close').click(function(){
+		$(".filter").toggleClass("active");
+	});
+	$(".filter .close_filter , .for_close").click(function () {
 		$("body").removeClass("open_modal");
 		$('.filter').removeClass('active')
 	})

@@ -1,0 +1,60 @@
+#company_body {
+	background-color: #b8cedb;
+}
+// company_hero
+.company_hero {
+	position: relative;
+	background-image: url(../images/company_hero_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 366px 0;
+
+	.company_hero_title {
+		position: relative;
+		z-index: 4;
+		color: rgb(12, 26, 55);
+		font-size: 50px;
+		font-weight: 700;
+		line-height: 68px;
+		letter-spacing: 0%;
+		text-align: center;
+		max-width: 1150px;
+		margin: 0 auto;
+	}
+}
+
+// advantages
+.advantages {
+	.advan_title {
+		color: rgb(12, 26, 55);
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 49px;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.advantages_block {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		margin-bottom: 60px;
+	}
+	.advantages_item {
+		padding: 60px 12px 60px 12px;
+		border-radius: 10px;
+		background: rgb(250, 250, 250);
+		flex: 0 0 auto;
+		width: calc(20% - 20px);
+	}
+	.advantage_icon {
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.advantage_name {
+		color: rgb(12, 26, 55);
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 33px;
+		text-align: center;
+	}
+}

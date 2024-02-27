@@ -2586,6 +2586,11 @@ textarea:focus) span {
   #company_question.question {
     margin-bottom: 60px;
   }
+  #swiper_container.container {
+    padding: 0;
+    margin-left: 45px;
+    max-width: 100%;
+  }
   .partner .partner_block {
     margin-top: 20px;
   }
@@ -3286,6 +3291,7 @@ textarea:focus) span {
   }
   .catalog .catalog_desc {
     line-height: 25px;
+    min-height: 50px;
   }
   .catalog .catalog_block {
     margin-bottom: 20px;
@@ -3511,6 +3517,9 @@ textarea:focus) span {
   header .header_middle .menus li.has_submenu .submenu {
     min-width: 375px;
     max-width: 375px;
+  }
+  .other_news #title {
+    margin-bottom: 13px;
   }
   .catalog#catalog_page .swiper_item {
     height: unset;
@@ -3935,6 +3944,7 @@ textarea:focus) span {
   #swiper_container.container {
     padding: 0;
     padding-left: 18px;
+    margin-left: 0;
   }
   #news_container.container {
     padding: 0;
@@ -3971,6 +3981,7 @@ textarea:focus) span {
   .catalog .catalog_desc {
     font-size: 15px;
     line-height: 22px;
+    min-height: 44px;
   }
   .catalog .swiper_img {
     margin-bottom: 20px;
@@ -3996,7 +4007,7 @@ textarea:focus) span {
   .blue_button a,
   .blue_button button {
     width: 157px;
-    padding: 5px 0;
+    padding: 4px 0;
     font-size: 13px;
     border-radius: 8px;
   }

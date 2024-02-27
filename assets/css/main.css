@@ -1265,13 +1265,20 @@ footer .social_title {
   color: #FFFFFF;
 }
 
+.pagination_wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 83px 0;
+}
+
 .pagination {
   display: flex;
   align-items: center;
   gap: 15px;
   justify-content: center;
-  padding: 11px 0;
-  margin: 0 0 83px 0;
+  padding: 11px 17px;
+  background-color: #FFF;
+  border-radius: 8px;
 }
 .pagination a {
   font-size: 17px;
@@ -2553,7 +2560,7 @@ textarea:focus) span {
   .catalog_row .catalog_cards {
     margin: 0 0 60px 0;
   }
-  .pagination {
+  .pagination_wrap {
     margin: 0 0 60px 0;
   }
   .catalog_column {
@@ -4161,7 +4168,7 @@ textarea:focus) span {
     gap: 8px;
     margin: 0 0 25px 0;
   }
-  .pagination {
+  .pagination_wrap {
     margin: 0 0 25px 0;
   }
   .catalog_column {
@@ -4205,14 +4212,11 @@ textarea:focus) span {
   .news_all .news_row {
     margin: 25px 0 35px 0;
   }
-  .news_all h2#title,
   .catalog_column h2#title {
     justify-content: flex-start;
     padding-left: 12px;
   }
-  .news_all h2#title::after, .news_all h2#title::before,
-  .catalog_column h2#title::after,
-  .catalog_column h2#title::before {
+  .catalog_column h2#title::after, .catalog_column h2#title::before {
     display: none;
   }
   .news_single {

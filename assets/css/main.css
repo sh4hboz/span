@@ -1071,6 +1071,7 @@ footer .social_title {
 }
 .filter .filter_item.active .filter_title span {
   background-color: #0C1A37;
+  padding: 0 0 0 1px;
 }
 .filter .filter_item.active .filter_title span svg {
   transform: rotateX(180deg);
@@ -1095,7 +1096,7 @@ footer .social_title {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 0px 0px 1px;
+  padding: 4px 0 0 1px;
   border-radius: 5px;
   transition: 0.3s all ease;
 }
@@ -3164,6 +3165,7 @@ textarea:focus) span {
   .filter.active {
     opacity: 1;
     visibility: visible;
+    z-index: 4;
   }
   .filter .filter_head .close_filter {
     display: block;

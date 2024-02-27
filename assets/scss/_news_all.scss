@@ -10,6 +10,7 @@
             border-radius: 10px;
             color: #0C1A37;
             margin: 0 0 24px 0;
+            transition: .3s all ease-out;
             &:last-child{
                 margin: 0;
             }
@@ -20,6 +21,9 @@
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
+            }
+            &:hover{
+                box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.2);
             }
         }
         .news_right{

@@ -109,6 +109,7 @@
         background-color: #FFFFFF;
         border-radius: 10px;
         text-decoration: none;
+        transition: .3s all ease-out;
         img{
             width: 212px;
             height: 212px;
@@ -133,6 +134,9 @@
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
         }
+        &:hover{
+            box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1)
+        }
     }
     &.grid{
         .catalog_item{
@@ -155,6 +159,10 @@
                 height: auto;
                 padding: 0 8px;
             }
+            &:hover{
+                box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.2);
+            }
+            
         }
     }
 }

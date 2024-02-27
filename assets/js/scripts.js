@@ -223,4 +223,49 @@ $(document).ready(function () {
 		$("body").removeClass("open_modal");
 		$('.filter').removeClass('active')
 	})
+
+	if($('.gallery_swiper').length > 0){
+		var gallery_swiper = new Swiper(".gallery_swiper",{
+			slidesPerView: 3,
+			spaceBetween: 25,
+			navigation: {
+				nextEl: ".gallery_swiper .next",
+				prevEl: ".gallery_swiper .prev",
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 6,
+				},
+				576: {
+					spaceBetween: 14,
+				},
+				768: {
+					spaceBetween: 25,
+				},
+			},
+		})
+		var news_other = new Swiper(".news_other_",{
+			slidesPerView: 2,
+			spaceBetween: 25,
+			navigation: {
+				nextEl: ".news_other_ .next",
+				prevEl: ".news_other_ .prev",
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 12,
+					slidesPerView: 1.4,
+					centeredSlides: true,
+					loop: true,
+				},
+				576: {
+					spaceBetween: 20,
+				},
+				768: {
+					spaceBetween: 25,
+				},
+			},
+		})
+		Fancybox.bind('[data-fancybox]', {});
+	}
 });

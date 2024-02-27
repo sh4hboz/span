@@ -449,13 +449,13 @@ header {
 	}
 	.swiper_offer_prev {
 		position: absolute;
-		top: 37%;
+		top: 47%;
 		left: -50px;
 	}
 	.swiper_offer_next {
 		right: -50px;
 		position: absolute;
-		top: 37%;
+		top: 47%;
 	}
 	.swiper_item {
 		box-sizing: border-box;
@@ -759,7 +759,7 @@ footer {
 			background: rgba(12, 26, 55, 0.5);
 		}
 	}
-	&:has(.filter.active){
+	&:has(.filter.active) {
 		overflow: visible;
 	}
 }

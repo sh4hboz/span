@@ -757,6 +757,9 @@ footer {
 			background: rgba(12, 26, 55, 0.5);
 		}
 	}
+	&:has(.filter.active){
+		overflow: visible;
+	}
 }
 .open_modal.modal1_active .modal1{
 	position: relative;

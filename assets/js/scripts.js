@@ -216,9 +216,11 @@ $(document).ready(function () {
 	})
 
 	$('.open_filter').click(function(){
+		$("body").toggleClass("open_modal");
 		$('.filter').toggleClass('active')
 	})
-	$('.filter .close_filter').click(function(){
+	$('.filter .close_filter , .for_close').click(function(){
+		$("body").removeClass("open_modal");
 		$('.filter').removeClass('active')
 	})
 });

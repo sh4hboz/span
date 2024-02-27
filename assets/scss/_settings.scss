@@ -111,7 +111,16 @@ main.index section {
 		}
 	}
 }
-
+.partner_next,
+.partner_prev {
+	&:hover {
+		border-radius: 6px;
+		background: rgb(12, 26, 55);
+		svg path {
+			fill: #fff;
+		}
+	}
+}
 // breadcrumb
 .breadcrumb_block {
 	padding-top: 40px;

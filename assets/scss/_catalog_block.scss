@@ -1,3 +1,6 @@
+.catalog_column{
+    padding: 40px 0 100px 0;
+}
 .subsection_row{
     display: flex;
     gap: 24px;
@@ -22,12 +25,16 @@
 }
 .sort{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     margin: 0 0 43px 0;
+    p{
+        margin: 4px 0 0 0;
+    }
     .sort_items{
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
         gap: 10px;
     }
     label{
@@ -49,34 +56,46 @@
             box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1);
             background: rgb(196, 215, 226);
         }
+        &:has(input:checked){
+            box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1);
+            background: rgb(196, 215, 226);
+        }
     }
 }
 .change_item{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 10px;
     margin: 0 0 16px 0;
+    span{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .open_filter{
+        display: none;
+    }
     div{
         cursor: pointer;
         svg rect{
-            fill-opacity: 0.5;
+            fill-opacity: .5;
         }
         &.active svg rect{
             fill-opacity: 1;
         }
-    }
+    }   
 }
 .catalog_row{
     display: flex;
     align-items: flex-start;
     gap: 24px;
-    .catalog_right{
-        margin: 0 0 83px 0;
-    }
+    position: relative;
     .catalog_cards{
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
+        margin: 0 0 83px 0;
     }
 }
 .catalog_cards{
@@ -108,6 +127,11 @@
             font-weight: 400;
             line-height: 22px;
             color: #0C1A37;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
     }
     &.grid{
@@ -127,6 +151,8 @@
                 overflow: hidden;
             }
             img{
+                width: 100%;
+                height: auto;
                 padding: 0 8px;
             }
         }
@@ -158,7 +184,7 @@
     }
     .filter_item{
         padding: 0 16px;
-        border-top: 0.5px solid rgb(12, 26, 55);
+        border-top: 0.5px solid #0C1A37;
         &.active{
             padding-bottom: 18px;
             .filter_title{
@@ -166,7 +192,7 @@
                 span{
                     background-color: #0C1A37;
                     svg{
-                        transform: rotate(180deg);
+                        transform: rotateX(180deg);
                         path{
                             fill: #FAFAFA;
                         }
@@ -213,6 +239,8 @@
         }
         .filter_collapse{
             position: relative;
+            display: flex;
+            flex-direction: column;
             &:has(input[type='checkbox'])::after{
                 position: absolute;
                 content: '';
@@ -225,20 +253,57 @@
             }
             .nice-select{
                 padding: 0;
-                border-radius: 10px 10px 0px 0px;
-                border: 0.5px solid #B8CEDB;
+                border: none;
                 height: auto;
-                .list{
-                    border-radius: 0;
-                    margin: 0;
-                    position: relative;
+                .current{
+                    display: flex;
+                    width: 100%;
+                    padding: 0 13px;
+                    border: 0.5px solid #B8CEDB;
+                    border-radius: 10px;
                 }
-                .option{
-                    padding: 11px 13px;
-                    border: 0.5px solid transparent;
-                    &:hover{
-                        border-color: #B8CEDB;
+                &.open{
+                    border: none;
+                    .current{
+                        border-radius: 10px 10px 0 0;
+                        border: 0.5px solid #B8CEDB;
                     }
+                    .list{
+                        border-radius: 0;
+                        margin: 0;
+                        position: relative;
+                        box-shadow: none;
+                    }
+                    .option{
+                        padding: 0 13px;
+                        border: 0.5px solid transparent;
+                        &.selected.focus{
+                            background-color: transparent;
+                        }
+                        &:hover{
+                            border-color: #B8CEDB;
+                            background-color: transparent;
+                        }
+                    }
+                    &::after{
+                        transform: rotateX(180deg);
+                    }
+                }
+                &::after{
+                    background-image: url(../images/icon/ep_arrow-left.svg);
+                    top: 11px;
+                    right: 13px;
+                    border: none;
+                    width: 22px;
+                    height: 19px;
+                    margin: 0;
+                    -webkit-transform-origin: initial;
+                    -ms-transform-origin: initial;
+                    transform-origin: initial;
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotateX(0deg);
+                    transition: .3s all ease-out;
                 }
             }
         }
@@ -247,6 +312,119 @@
             &:last-child{
                 margin: 0;
             }
+        }
+        .input_wrap{
+            display: flex;
+            gap: 6px;
+            margin: 0 0 14px 0;
+            input{
+                width: calc(50% - 3px);
+                padding: 8px 10px 8px 10px;
+                border-radius: 5px;
+                border: .5px solid #B8CEDB;
+                background-color: #FAFAFA;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19px;
+                -moz-appearance: textfield;
+                outline: none;
+                &::-webkit-outer-spin-button,&::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+        }
+        .irs--flat .irs-min, .irs--flat .irs-max,.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single{
+            display: none;
+        }
+        .irs--flat .irs-line{
+            height: 3px;
+            border-radius: 2px;
+            background-color: #E7EEF2;
+        }
+        .irs--flat .irs-bar{
+            height: 3px;
+            border-radius: 2px;
+            background-color: #0C1A37;
+        }
+        .irs--flat .irs-handle{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #0C1A37;
+            cursor: pointer;
+            i{
+                display: none;
+            }
+        }
+    }
+    .filter_actions{
+        padding: 0 16px 18px 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        button{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 19px;
+            border-radius: 10px;
+            outline: none;
+            border: 2px solid #0C1A37;
+            transition: .3s all ease-out;
+            width: 135px;
+            padding: 8px 0;
+            cursor: pointer;
+        }
+        .submit{
+            background-color: #0C1A37;
+            color: #FFFFFF;
+            &:hover{
+                background-color: #FFFFFF;
+                color: #0C1A37;
+            }
+        }
+        .reset{
+            color: #0C1A37;
+            &:hover{
+                background-color: #0C1A37;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+.pagination{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    padding: 11px 0;
+    margin: 0 0 83px 0;
+    a{
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 23px;
+        color: #0C1A37;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        transition: .3s all ease;
+        svg path{
+            transition: .3s all ease;
+        }
+        &.disable{
+            color: #8DA1B2;
+            cursor: default;
+            svg path{
+                stroke: #8DA1B2;
+            }
+        }
+        &.active{
+            color: #FFFFFF;
+            border-radius: 6px;
+            background-color: #0C1A37;
+            padding: 6px 13px;
         }
     }
 }

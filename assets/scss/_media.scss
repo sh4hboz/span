@@ -59,6 +59,21 @@
 	.catalog .swiper_item {
 		height: 430px;
 	}
+	.subsection_row .subsection{
+		padding: 16px 18px;
+		font-size: 23px;
+		line-height: 27px;
+	}
+	.filter{
+		width: 300px;
+	}
+	.catalog_cards .catalog_item{
+		padding: 9px;
+		gap: 20px;
+	}
+	.catalog_cards.grid .catalog_item{
+		padding: 19px 9px;
+	}
 }
 @media (max-width: 1200px) {
 	footer .footer_last {
@@ -208,6 +223,37 @@
 	}
 	.company .blue_button#mobile_blue {
 		display: block;
+	}
+	.catalog_cards.grid .catalog_item{
+		width: calc(33.33% - 16px);
+	}
+	.catalog_cards .catalog_item img{
+		width: 190px;
+		height: auto;
+	}
+	.catalog_cards .catalog_item .item_title {
+		font-size: 28px;
+		line-height: 31px;
+		margin: 0 0 10px 0;
+	}
+	.catalog_cards.grid .catalog_item {
+		width: calc(33.33% - 16px);
+	}
+	.subsection_row{
+		flex-wrap: wrap;
+		margin: 30px 0 20px 0;
+	}
+	.subsection_row .subsection{
+		width: calc(33.33% - 16px);
+	}
+	.catalog_row .catalog_cards{
+		margin: 0 0 60px 0;
+	}
+	.pagination{
+		margin: 0 0 60px 0;
+	}
+	.catalog_column {
+		padding: 30px 0 60px 0;
 	}
 }
 @media (max-width: 992px) {
@@ -689,6 +735,36 @@
 	.open_modal.modal2_active .modal2 {
 		min-height: 500px;
 	}
+	.subsection_row .subsection {
+		width: calc(50% - 12px);
+	}
+	.change_item{
+		justify-content: space-between;
+	}
+	.change_item .open_filter{
+		display: flex;
+		cursor: pointer;
+	}
+	.filter {
+		width: calc(100% - 20px);
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		overflow: hidden;
+		visibility: hidden;
+		opacity: 0;
+		&.active{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.filter .filter_head .close_filter{
+		display: block;
+		cursor: pointer;
+	}
+	.catalog_cards .catalog_item .item_desc{
+		-webkit-line-clamp: 4;
+	}
 }
 @media (max-width: 768px) {
 	.hero {
@@ -778,6 +854,66 @@
 				right: 22px;
 			}
 		}
+	}
+	.subsection_row .subsection{
+		font-size: 18px;
+		line-height: 25px;
+		justify-content: space-between;
+		img{
+			width: 66px;
+			height: auto;
+		}
+	}
+	.sort,.sort label{
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.sort label{
+		padding: 5.5px 20px;
+	}
+	.catalog_cards .catalog_item img {
+		width: 108px;
+		height: 147px;
+	}
+	.catalog_cards .catalog_item {
+		padding: 6px 11px 6px 11px;
+		gap: 5px;
+	}
+	.catalog_cards .catalog_item .item_title {
+		font-size: 18px;
+		line-height: 25px;
+		margin: 0 0 8px 0;
+	}
+	.catalog_cards .catalog_item .item_desc {
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.subsection_row .subsection {
+		padding: 17px 14px;
+	}
+	.subsection_row {
+		margin: 30px 0 40px 0;
+	}
+	.change_item{
+		margin: 0 0 20px 0;
+	}
+	.catalog_row .catalog_cards{
+		gap: 10px;
+	}
+	.catalog_cards.grid{
+		gap: 20px;
+	}
+	.catalog_cards.grid .catalog_item {
+		width: calc(33.33% - 13.33px);
+		gap: 20px;
+	}
+	.catalog_cards.grid .catalog_item .item_title{
+		font-size: 18px;
+    	line-height: 25px;
+	}
+	.catalog_descriptions p{
+		font-size: 16px;
+		line-height: 22px;
 	}
 }
 @media (max-width: 576px) {
@@ -1268,6 +1404,74 @@
 	}
 	.open_modal.modal2_active .modal2 {
 		min-height: 350px;
+	}
+	.catalog_cards.grid {
+		gap: 12px;
+	}
+	.catalog_cards.grid .catalog_item {
+		width: calc(50% - 6px);
+		gap: 10px;
+		padding: 11px 6px 16px 6px;
+	}
+	.catalog_cards.grid .catalog_item img{
+		padding: 0 6px;
+	}
+	.catalog_cards .catalog_item img {
+		width: 71px;
+		height: 78px;
+	}
+	.catalog_cards .catalog_item .item_title {
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.catalog_cards .catalog_item .item_title{
+		margin: 0 0 4px 0;
+	}
+	.subsection_row {
+		margin: 25px 0;
+		gap: 12px;
+	}
+	.subsection_row .subsection {
+		padding: 12px 14px;
+		font-size: 14px;
+		line-height: 19px;
+		width: calc(50% - 6px);
+		gap: 10px;
+	}
+	.subsection_row .subsection img {
+		width: 38px;
+	}
+	.sort{
+		flex-direction: column;
+		gap: 8px;
+		margin: 0 0 25px 0;
+	}
+	.sort p{
+		margin: 0;
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.sort label {
+		padding: 9px 20px;
+		font-size: 11px;
+		line-height: 15px;
+	}
+	.catalog_row .catalog_cards {
+		gap: 8px;
+		margin: 0 0 25px 0;
+	}
+	.pagination {
+		margin: 0 0 25px 0;
+	}
+	.catalog_column {
+		padding: 25px 0;
+	}
+	.pagination a {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.pagination a.active{
+		padding: 4px 9px;
 	}
 }
 

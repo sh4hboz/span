@@ -353,6 +353,12 @@
 	header .header_middle .menus li.has_submenu .submenu {
 		top: calc(100% + 26px);
 	}
+	.catalog .swiper_img {
+		text-align: center;
+		img {
+			max-width: 200px;
+		}
+	}
 }
 @media (max-width: 992px) {
 	body:has(.menus.active) {
@@ -360,6 +366,9 @@
 	}
 	#company_question.question {
 		margin-bottom: 60px;
+	}
+	footer .list_value {
+		max-width: 180px;
 	}
 	#swiper_container.container {
 		padding: 0;
@@ -782,7 +791,7 @@
 		justify-content: space-between;
 	}
 	footer .footer_block {
-		gap: 40px 60px;
+		gap: 40px 45px;
 	}
 	footer {
 		padding: 35px 0;

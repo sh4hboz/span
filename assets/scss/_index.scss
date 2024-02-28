@@ -52,8 +52,8 @@ header {
 						width: 100%;
 					}
 				}
-				&.has_submenu{
-					&::before{
+				&.has_submenu {
+					&::before {
 						position: absolute;
 						content: "";
 						width: 100%;
@@ -196,7 +196,7 @@ header {
 	padding: 345px 0 308px 0;
 	position: relative;
 	z-index: 1;
-	.hero_bg{
+	.hero_bg {
 		position: absolute;
 		left: 0;
 		top: 0;

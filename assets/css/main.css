@@ -505,6 +505,10 @@ header .header_right .hamburger {
   text-align: center;
   margin-bottom: 40px;
 }
+.question .question_block {
+  max-width: 1176px;
+  margin: 0 auto;
+}
 .question .question_block > .question_input {
   display: flex;
   gap: 24px;
@@ -1416,7 +1420,6 @@ footer .social_title {
   gap: 20px;
 }
 .card_tab .tab_navigation li:hover a, .card_tab .tab_navigation li.active a {
-  font-weight: 700;
   color: rgb(12, 26, 55);
   background: rgb(196, 215, 226);
 }
@@ -1424,6 +1427,7 @@ footer .social_title {
   display: inline-block;
   color: rgb(12, 26, 55);
   font-size: 20px;
+  width: 100%;
   font-weight: 400;
   line-height: 27px;
   padding: 13px 49px;
@@ -1504,14 +1508,14 @@ footer .social_title {
   gap: 16px;
 }
 .card_tab .pdf_name {
-  color: rgb(12, 26, 55);
+  color: #246e99;
   font-size: 20px;
   font-weight: 400;
   line-height: 27px;
-  transition: all ease-in 0.2s;
+  transition: all ease-in 0.1s;
 }
 .card_tab .pdf_name:hover {
-  font-weight: 700;
+  color: #007ac0;
 }
 
 #company_body {
@@ -2643,6 +2647,12 @@ textarea:focus) span {
   header .header_middle .menus li.has_submenu .submenu {
     top: calc(100% + 26px);
   }
+  .catalog .swiper_img {
+    text-align: center;
+  }
+  .catalog .swiper_img img {
+    max-width: 200px;
+  }
 }
 @media (max-width: 992px) {
   body:has(.menus.active) {
@@ -2650,6 +2660,9 @@ textarea:focus) span {
   }
   #company_question.question {
     margin-bottom: 60px;
+  }
+  footer .list_value {
+    max-width: 180px;
   }
   #swiper_container.container {
     padding: 0;
@@ -3047,7 +3060,7 @@ textarea:focus) span {
     justify-content: space-between;
   }
   footer .footer_block {
-    gap: 40px 60px;
+    gap: 40px 45px;
   }
   footer {
     padding: 35px 0;

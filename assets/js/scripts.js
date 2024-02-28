@@ -353,4 +353,14 @@ $(document).ready(function () {
 		});
 		Fancybox.bind("[data-fancybox]", {});
 	}
+	console.log(screen.width)
+	if(screen.width < 992){
+		$('.has_submenu').click(function(){
+			console.log(1)
+			$(this).addClass('active')
+		})
+		$('.has_submenu .submenu li').click(function(){
+			$(this).toggleClass('active')
+		})
+	}
 });

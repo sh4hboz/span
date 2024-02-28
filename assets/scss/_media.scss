@@ -577,46 +577,57 @@
 					.inner_submenu li {
 						font-weight: 300;
 					}
-					&.has_submenu:hover {
-						flex-direction: column;
-						align-items: flex-start;
-						height: auto;
-						border-color: rgb(184, 206, 219);
-						padding-bottom: 0;
-						-webkit-text-stroke: 0;
-						.submenu {
-							position: relative;
-							border-color: rgb(184, 206, 219);
-							li {
-								border-color: rgb(184, 206, 219);
+					&.has_submenu{
+						&:hover{
+							.submenu{
+								opacity: 0;
+								visibility: hidden;
 							}
-							li:hover {
-								flex-direction: column;
-								align-items: flex-start;
-								height: auto;
-								padding: 17px 0 0 0;
-								gap: 19px;
-								.inner_submenu {
-									position: relative;
-									transform: none;
-									width: 100%;
-									li {
-										padding: 8px 32px 8px 32px;
+						}
+						&.active{
+							flex-direction: column;
+							align-items: flex-start;
+							height: auto;
+							padding-bottom: 0;
+							-webkit-text-stroke: 0;
+							.submenu {
+								position: relative;
+								li{
+									&:hover{
+
 									}
+									&.active{
+										flex-direction: column;
+										align-items: flex-start;
+										height: auto;
+										padding: 17px 0 0 0;
+										gap: 19px;
+										.inner_submenu {
+											position: relative;
+											transform: none;
+											width: 100%;
+											li {
+												padding: 8px 32px 8px 32px;
+											}
+										}
+										a {
+											margin: 0 0 0 25px;
+										}
+										img {
+											transform: rotate(-90deg);
+										}
+									}
+
 								}
-								a {
-									margin: 0 0 0 25px;
-								}
-								img {
-									transform: rotate(-90deg);
-								}
+							}
+							img{
+								transform: rotate(-180deg);
 							}
 						}
 						img {
 							position: absolute;
 							right: 16px;
-							top: 20px;
-							transform: rotate(-180deg);
+							top: 26px;
 						}
 					}
 					&.has_submenu {
@@ -624,7 +635,7 @@
 						border-bottom: none;
 						gap: 15px;
 						.submenu {
-							border-top: 1px solid rgb(184, 206, 219);
+							border: none;
 							li {
 								height: 58px;
 								padding: 8px 25px 8px 25px;
@@ -663,6 +674,7 @@
 			.search_wrap,
 			.hamburger {
 				display: block;
+				cursor: pointer;
 			}
 			.to_tel {
 				border: 1px solid rgb(12, 26, 55);

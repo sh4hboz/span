@@ -21,7 +21,7 @@ $(document).ready(function () {
 			breakpoints: {
 				// when window width is >= 320px
 				320: {
-					slidesPerView: 1.6,
+					slidesPerView: 1.8,
 					spaceBetween: 15,
 				},
 				// when window width is >= 640px
@@ -58,7 +58,7 @@ $(document).ready(function () {
 
 	$(".hamburger , .close_menu img").click(function () {
 		$(".menus").toggleClass("active");
-		$('.has_submenu, .has_submenu li ').removeClass('active')
+		$(".has_submenu, .has_submenu li ").removeClass("active");
 	});
 
 	// catalog swiper
@@ -358,14 +358,14 @@ $(document).ready(function () {
 		});
 		Fancybox.bind("[data-fancybox]", {});
 	}
-	if(screen.width < 992){
-		$('.has_submenu span, .has_submenu img').click(function(){
-			$(this).parent().toggleClass('active')
-			$(this).parent().find('li').removeClass('active')
-		})
-		$('.has_submenu .submenu > li').click(function(){
-			$(this).toggleClass('active')
-			$(this).siblings().removeClass('active')
-		})
+	if (screen.width < 992) {
+		$(".has_submenu span, .has_submenu img").click(function () {
+			$(this).parent().toggleClass("active");
+			$(this).parent().find("li").removeClass("active");
+		});
+		$(".has_submenu .submenu > li").click(function () {
+			$(this).toggleClass("active");
+			$(this).siblings().removeClass("active");
+		});
 	}
 });

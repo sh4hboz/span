@@ -1609,6 +1609,7 @@ footer .social_title {
 }
 .company_desc_section .special_grey_block#top {
   transform: rotate(-180deg);
+  margin-bottom: 0;
 }
 
 .company_activities .swiper-slide-active .activity_item {
@@ -2658,6 +2659,12 @@ textarea:focus) span {
   body:has(.menus.active) {
     overflow: hidden;
   }
+  .advantage_icon img {
+    width: 50px;
+    height: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   #company_question.question {
     margin-bottom: 60px;
   }
@@ -2734,7 +2741,7 @@ textarea:focus) span {
     line-height: 25px;
   }
   .advantages .advantages_item {
-    padding: 47px 12px 30px 12px;
+    padding: 28px 12px 25px 12px;
   }
   .company_desc_section .special_grey_block {
     background: linear-gradient(180deg, rgba(184, 206, 219, 0), rgb(184, 206, 219) 100%);
@@ -3306,7 +3313,7 @@ textarea:focus) span {
     margin: 3px 0 0 0;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .hero {
     padding: 150px 0;
   }
@@ -3631,6 +3638,12 @@ textarea:focus) span {
   .other_news #title {
     margin-bottom: 13px;
   }
+  footer .list_value {
+    max-width: 72%;
+  }
+  footer .footer_navs li a {
+    display: inline-block;
+  }
   .catalog#catalog_page .swiper_item {
     height: unset;
   }
@@ -3722,6 +3735,7 @@ textarea:focus) span {
     margin-bottom: 60px;
     background-repeat: no-repeat;
     background-size: cover;
+    background: #b8cedb;
   }
   .company_desc_section .company_desc_img2 {
     margin-left: 12px;
@@ -3735,7 +3749,8 @@ textarea:focus) span {
     margin-bottom: 0;
   }
   .advantages .advantages_item {
-    padding: 20px 10px 20px 10px;
+    padding: 16px;
+    width: calc(50% - 6px);
   }
   .company_desc_section .special_grey_block {
     display: none;
@@ -3761,6 +3776,11 @@ textarea:focus) span {
   }
   .advantage_icon img {
     width: 40px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .advantages .advantage_icon {
+    margin-bottom: -5px;
   }
   .hero {
     padding: 42px 0 69px 0;
@@ -3979,7 +3999,7 @@ textarea:focus) span {
     width: 20px;
   }
   footer .footer_navs {
-    gap: 8px;
+    gap: 7px;
     max-width: 150px;
   }
   footer .subscribe_form input {

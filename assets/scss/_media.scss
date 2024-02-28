@@ -571,8 +571,11 @@
 					border-top: 1px solid rgb(184, 206, 219);
 					font-weight: 700;
 					height: 58px;
+					font-size: 16px;
+					line-height: 22px;
 					.submenu li {
 						font-weight: 600;
+						border: none;
 					}
 					.inner_submenu li {
 						font-weight: 300;
@@ -592,6 +595,8 @@
 							-webkit-text-stroke: 0;
 							.submenu {
 								position: relative;
+								opacity: 1;
+								visibility: visible;
 								li{
 									&:hover{
 
@@ -1009,12 +1014,25 @@
 	.catalog#catalog_page .catalog_desc {
 		font-size: 18px;
 	}
-	.contacts .contacts_row .contact_item {
-		width: calc(50% - 11px);
+	.contacts .contacts_row .contact_item{
+		gap: 12px;
+		padding: 36px 9px;
 	}
-	.contacts .contacts_row .contact_item:last-child {
-		width: 100%;
+	.contacts .contacts_row .contact_item h3 {
+		font-size: 18px;
+		line-height: 25px;
 	}
+	.contacts .contacts_row .contact_item a {
+		font-size: 16px;
+		line-height: 22px;
+		&+a{
+			margin: 6px 0 0 0;
+		}
+	}
+	.contacts .contacts_row .contact_item a i {
+		margin: 3px 0 0 0;
+	}
+	
 }
 @media (max-width: 768px) {
 	.hero {
@@ -1281,7 +1299,7 @@
 	}
 	.contacts .contacts_row .contact_item {
 		padding: 36px 18px;
-		width: calc(50% - 7px);
+		width: 100%;
 		gap: 12px;
 	}
 	.contacts .contacts_row .contact_item h3 {
@@ -1294,6 +1312,14 @@
 	.contacts .contacts_row .contact_item a {
 		font-size: 16px;
 		line-height: 22px;
+		&+a{
+		margin: 0;
+		}
+	}
+	.contact_bottom {
+		display: flex;
+		align-items: center;
+		gap: 22px;
 	}
 	.hero h1 {
 		font-size: 32px;
@@ -2104,7 +2130,6 @@
 	}
 	.contacts .contacts_row .contact_item {
 		padding: 12px 8px;
-		width: 100%;
 		gap: 8px;
 	}
 	.contacts .contacts_row .contact_item h3 {
@@ -2114,11 +2139,6 @@
 	.contacts .contacts_row .contact_item a {
 		font-size: 13px;
 		line-height: 18px;
-	}
-	.contact_bottom {
-		display: flex;
-		align-items: center;
-		gap: 22px;
 	}
 	.contacts .contacts_row .contact_item a {
 		font-size: 13px;

@@ -26,7 +26,11 @@ $(document).ready(function () {
 				},
 				// when window width is >= 640px
 				577: {
-					slidesPerView: 2,
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				767: {
+					slidesPerView: 3,
 					spaceBetween: 20,
 				},
 				993: {
@@ -233,7 +237,7 @@ $(document).ready(function () {
 	// thumb swiper
 	if ($(".mySwiper").length > 0) {
 		var swiper = new Swiper(".mySwiper", {
-			loop: true,
+			loop: false,
 			direction: "vertical",
 			spaceBetween: 20,
 			slidesPerView: 4,

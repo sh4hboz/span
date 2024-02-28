@@ -89,7 +89,6 @@
 			&:hover,
 			&.active {
 				a {
-					font-weight: 700;
 					color: rgb(12, 26, 55);
 					background: rgb(196, 215, 226);
 				}
@@ -98,6 +97,7 @@
 				display: inline-block;
 				color: rgb(12, 26, 55);
 				font-size: 20px;
+				width: 100%;
 				font-weight: 400;
 				line-height: 27px;
 				padding: 13px 49px;
@@ -180,13 +180,13 @@
 		gap: 16px;
 	}
 	.pdf_name {
-		color: rgb(12, 26, 55);
+		color: #246e99;
 		font-size: 20px;
 		font-weight: 400;
 		line-height: 27px;
-		transition: all ease-in 0.2s;
+		transition: all ease-in 0.1s;
 		&:hover {
-			font-weight: 700;
+			color: #007ac0;
 		}
 	}
 }

@@ -56,9 +56,9 @@ header .header_middle .menus li.has_submenu::before {
   position: absolute;
   content: "";
   width: 100%;
-  height: 26px;
+  height: 40px;
   left: 0;
-  bottom: -25px;
+  bottom: -28px;
 }
 header .header_middle .menus li:hover {
   -webkit-text-stroke: 1px rgb(12, 26, 55);
@@ -90,13 +90,18 @@ header .header_middle .menus li.has_submenu:hover .submenu {
 header .header_middle .menus li.has_submenu .submenu li {
   height: 66px;
   padding: 8px 16px 8px 16px;
-  border-top: 1px solid rgb(141, 161, 178);
 }
 header .header_middle .menus li.has_submenu .submenu li::after {
-  display: none;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 0;
+  background-color: rgb(141, 161, 178);
 }
-header .header_middle .menus li.has_submenu .submenu li:first-child {
-  border: none;
+header .header_middle .menus li.has_submenu .submenu li:first-child::after {
+  display: none;
 }
 header .header_middle .menus li.has_submenu .submenu li:hover {
   background: rgb(184, 206, 219);
@@ -889,6 +894,7 @@ footer .social_title {
   color: #0C1A37;
   transition: 0.3s all ease-out;
   border-radius: 10px;
+  background-color: #FFFFFF;
 }
 .subsection_row .subsection img {
   width: 91px;
@@ -926,6 +932,9 @@ footer .social_title {
   border-radius: 5px;
   transition: 0.3s all ease-out;
   color: #0C1A37;
+  background-color: #FFFFFF;
+  border: 1px solid #FFF;
+  overflow: hidden;
   cursor: pointer;
 }
 .sort label input {
@@ -935,7 +944,7 @@ footer .social_title {
 }
 .sort label:hover {
   box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1);
-  background: rgb(196, 215, 226);
+  border-color: #C4D7E2;
 }
 .sort label:has(input:checked) {
   box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1);
@@ -2856,54 +2865,60 @@ textarea:focus) span {
     border-top: 1px solid rgb(184, 206, 219);
     font-weight: 700;
     height: 58px;
+    font-size: 16px;
+    line-height: 22px;
   }
   header .header_middle .menus li .submenu li {
     font-weight: 600;
+    border: none;
   }
   header .header_middle .menus li .inner_submenu li {
     font-weight: 300;
   }
-  header .header_middle .menus li.has_submenu:hover {
+  header .header_middle .menus li.has_submenu:hover .submenu {
+    opacity: 0;
+    visibility: hidden;
+  }
+  header .header_middle .menus li.has_submenu.active {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
-    border-color: rgb(184, 206, 219);
     padding-bottom: 0;
     -webkit-text-stroke: 0;
   }
-  header .header_middle .menus li.has_submenu:hover .submenu {
+  header .header_middle .menus li.has_submenu.active .submenu {
     position: relative;
-    border-color: rgb(184, 206, 219);
+    opacity: 1;
+    visibility: visible;
   }
-  header .header_middle .menus li.has_submenu:hover .submenu li {
-    border-color: rgb(184, 206, 219);
-  }
-  header .header_middle .menus li.has_submenu:hover .submenu li:hover {
+  header .header_middle .menus li.has_submenu.active .submenu li.active {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
     padding: 17px 0 0 0;
     gap: 19px;
   }
-  header .header_middle .menus li.has_submenu:hover .submenu li:hover .inner_submenu {
+  header .header_middle .menus li.has_submenu.active .submenu li.active .inner_submenu {
     position: relative;
     transform: none;
     width: 100%;
   }
-  header .header_middle .menus li.has_submenu:hover .submenu li:hover .inner_submenu li {
+  header .header_middle .menus li.has_submenu.active .submenu li.active .inner_submenu li {
     padding: 8px 32px 8px 32px;
   }
-  header .header_middle .menus li.has_submenu:hover .submenu li:hover a {
+  header .header_middle .menus li.has_submenu.active .submenu li.active a {
     margin: 0 0 0 25px;
   }
-  header .header_middle .menus li.has_submenu:hover .submenu li:hover img {
+  header .header_middle .menus li.has_submenu.active .submenu li.active img {
     transform: rotate(-90deg);
   }
-  header .header_middle .menus li.has_submenu:hover img {
+  header .header_middle .menus li.has_submenu.active img {
+    transform: rotate(-180deg);
+  }
+  header .header_middle .menus li.has_submenu img {
     position: absolute;
     right: 16px;
-    top: 20px;
-    transform: rotate(-180deg);
+    top: 26px;
   }
   header .header_middle .menus li.has_submenu {
     padding: 16px 0;
@@ -2911,7 +2926,7 @@ textarea:focus) span {
     gap: 15px;
   }
   header .header_middle .menus li.has_submenu .submenu {
-    border-top: 1px solid rgb(184, 206, 219);
+    border: none;
   }
   header .header_middle .menus li.has_submenu .submenu li {
     height: 58px;
@@ -2947,6 +2962,7 @@ textarea:focus) span {
   header .header_right .search_wrap,
   header .header_right .hamburger {
     display: block;
+    cursor: pointer;
   }
   header .header_right .to_tel {
     border: 1px solid rgb(12, 26, 55);
@@ -3272,10 +3288,22 @@ textarea:focus) span {
     font-size: 18px;
   }
   .contacts .contacts_row .contact_item {
-    width: calc(50% - 11px);
+    gap: 12px;
+    padding: 36px 9px;
   }
-  .contacts .contacts_row .contact_item:last-child {
-    width: 100%;
+  .contacts .contacts_row .contact_item h3 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .contacts .contacts_row .contact_item a {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .contacts .contacts_row .contact_item a + a {
+    margin: 6px 0 0 0;
+  }
+  .contacts .contacts_row .contact_item a i {
+    margin: 3px 0 0 0;
   }
 }
 @media (max-width: 768px) {
@@ -3537,7 +3565,7 @@ textarea:focus) span {
   }
   .contacts .contacts_row .contact_item {
     padding: 36px 18px;
-    width: calc(50% - 7px);
+    width: 100%;
     gap: 12px;
   }
   .contacts .contacts_row .contact_item h3 {
@@ -3550,6 +3578,14 @@ textarea:focus) span {
   .contacts .contacts_row .contact_item a {
     font-size: 16px;
     line-height: 22px;
+  }
+  .contacts .contacts_row .contact_item a + a {
+    margin: 0;
+  }
+  .contact_bottom {
+    display: flex;
+    align-items: center;
+    gap: 22px;
   }
   .hero h1 {
     font-size: 32px;
@@ -4347,7 +4383,6 @@ textarea:focus) span {
   }
   .contacts .contacts_row .contact_item {
     padding: 12px 8px;
-    width: 100%;
     gap: 8px;
   }
   .contacts .contacts_row .contact_item h3 {
@@ -4357,11 +4392,6 @@ textarea:focus) span {
   .contacts .contacts_row .contact_item a {
     font-size: 13px;
     line-height: 18px;
-  }
-  .contact_bottom {
-    display: flex;
-    align-items: center;
-    gap: 22px;
   }
   .contacts .contacts_row .contact_item a {
     font-size: 13px;

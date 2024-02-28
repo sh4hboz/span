@@ -58,6 +58,7 @@ $(document).ready(function () {
 
 	$(".hamburger , .close_menu img").click(function () {
 		$(".menus").toggleClass("active");
+		$('.has_submenu, .has_submenu li ').removeClass('active')
 	});
 
 	// catalog swiper
@@ -306,7 +307,7 @@ $(document).ready(function () {
 		$("body").toggleClass("open_modal");
 		$(".filter").toggleClass("active");
 	});
-	$(".filter .close_filter , .for_close").click(function () {
+	$(".filter .close_filter , .for_close, .filter .reset").click(function () {
 		$("body").removeClass("open_modal");
 		$(".filter").removeClass("active");
 	});
@@ -356,5 +357,15 @@ $(document).ready(function () {
 			},
 		});
 		Fancybox.bind("[data-fancybox]", {});
+	}
+	if(screen.width < 992){
+		$('.has_submenu span, .has_submenu img').click(function(){
+			$(this).parent().toggleClass('active')
+			$(this).parent().find('li').removeClass('active')
+		})
+		$('.has_submenu .submenu > li').click(function(){
+			$(this).toggleClass('active')
+			$(this).siblings().removeClass('active')
+		})
 	}
 });

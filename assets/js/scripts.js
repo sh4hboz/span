@@ -311,6 +311,7 @@ $(document).ready(function () {
 		var gallery_swiper = new Swiper(".gallery_swiper", {
 			slidesPerView: 3,
 			spaceBetween: 25,
+			loop: true,
 			navigation: {
 				nextEl: ".gallery_swiper .next",
 				prevEl: ".gallery_swiper .prev",
@@ -330,6 +331,7 @@ $(document).ready(function () {
 		var news_other = new Swiper(".news_other_", {
 			slidesPerView: 2,
 			spaceBetween: 25,
+			loop: true,
 			navigation: {
 				nextEl: ".news_other_ .next",
 				prevEl: ".news_other_ .prev",

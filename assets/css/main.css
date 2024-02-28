@@ -1138,15 +1138,21 @@ footer .social_title {
   display: flex;
   flex-direction: column;
 }
-.filter .filter_item .filter_collapse:has(input[type=checkbox])::after {
-  position: absolute;
-  content: "";
+.filter .filter_item .filter_collapse:has(input[type=checkbox]) {
+  overflow: auto;
+  max-height: 200px;
   height: 100%;
+  margin: 0 8px 0 0;
+}
+.filter .filter_item .filter_collapse:has(input[type=checkbox])::-webkit-scrollbar {
   width: 4px;
+}
+.filter .filter_item .filter_collapse:has(input[type=checkbox])::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.filter .filter_item .filter_collapse:has(input[type=checkbox])::-webkit-scrollbar-thumb {
+  background: #0C1A37;
   border-radius: 5px;
-  right: 8px;
-  top: 0;
-  background-color: #0C1A37;
 }
 .filter .filter_item .filter_collapse .nice-select {
   padding: 0;

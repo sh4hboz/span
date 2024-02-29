@@ -457,13 +457,15 @@ header .header_right .hamburger {
 }
 .special_offers .swiper_offer_prev {
   position: absolute;
-  top: 47%;
+  top: 50%;
   left: -50px;
+  transform: translate(0, -50%);
 }
 .special_offers .swiper_offer_next {
   right: -50px;
   position: absolute;
-  top: 47%;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .special_offers .swiper_item {
   box-sizing: border-box;

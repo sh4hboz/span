@@ -2339,6 +2339,10 @@ textarea:focus) span {
   border-color: #fafafa;
 }
 
+:root {
+  color-scheme: only light;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;

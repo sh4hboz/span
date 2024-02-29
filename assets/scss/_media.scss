@@ -651,11 +651,11 @@
 									}
 								}
 							}
-							img {
+							svg {
 								transform: rotate(-180deg);
 							}
 						}
-						img {
+						svg {
 							position: absolute;
 							right: 25px;
 							top: 26px;
@@ -736,11 +736,12 @@
 			flex-direction: row-reverse;
 			align-items: center;
 			gap: 16px;
-			span {
+			.to_tel {
 				display: none;
 			}
 			.search_wrap,
-			.hamburger {
+			.hamburger,
+			.tel_mobile{
 				display: block;
 				cursor: pointer;
 			}
@@ -1422,7 +1423,8 @@
 				width: 17px;
 				height: 17px;
 			}
-			.hamburger {
+			.hamburger,
+			.tel_mobile{
 				width: 33px;
 				height: 33px;
 			}

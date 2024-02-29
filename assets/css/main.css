@@ -175,7 +175,8 @@ header .header_right .blue_button a {
   padding: 15.5px 0;
 }
 header .header_right .search_wrap,
-header .header_right .hamburger {
+header .header_right .hamburger,
+header .header_right .tel_mobile {
   display: none;
 }
 
@@ -2953,10 +2954,10 @@ textarea:focus) span {
   header .header_middle .menus li.has_submenu.active .submenu li.active img {
     transform: rotate(-90deg);
   }
-  header .header_middle .menus li.has_submenu.active img {
+  header .header_middle .menus li.has_submenu.active svg {
     transform: rotate(-180deg);
   }
-  header .header_middle .menus li.has_submenu img {
+  header .header_middle .menus li.has_submenu svg {
     position: absolute;
     right: 25px;
     top: 26px;
@@ -3032,11 +3033,12 @@ textarea:focus) span {
     align-items: center;
     gap: 16px;
   }
-  header .header_right span {
+  header .header_right .to_tel {
     display: none;
   }
   header .header_right .search_wrap,
-  header .header_right .hamburger {
+  header .header_right .hamburger,
+  header .header_right .tel_mobile {
     display: block;
     cursor: pointer;
   }
@@ -3698,7 +3700,8 @@ textarea:focus) span {
     width: 17px;
     height: 17px;
   }
-  header .header_right .hamburger {
+  header .header_right .hamburger,
+  header .header_right .tel_mobile {
     width: 33px;
     height: 33px;
   }

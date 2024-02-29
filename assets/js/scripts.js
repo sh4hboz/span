@@ -56,7 +56,7 @@ $(document).ready(function () {
 		});
 	}
 
-	$(".hamburger , .close_menu img").click(function () {
+	$(".hamburger , .close_menu div").click(function () {
 		$(".menus").toggleClass("active");
 		$(".has_submenu, .has_submenu li ").removeClass("active");
 	});
@@ -363,7 +363,8 @@ $(document).ready(function () {
 	if (screen.width < 992) {
 		$(".has_submenu .menu_right").click(function () {
 			$(this).parent().toggleClass("active");
-			$(this).parent().find("li").removeClass("active");
+			$(this).parent().siblings().removeClass("active");
+			$(this).parent().siblings().find('li').removeClass("active");
 		});
 	}
 });

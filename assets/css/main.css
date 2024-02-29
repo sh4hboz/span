@@ -2339,6 +2339,10 @@ textarea:focus) span {
   border-color: #fafafa;
 }
 
+:root {
+  color-scheme: only light;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -2963,11 +2967,6 @@ textarea:focus) span {
   header .header_middle .menus li.has_submenu.active svg {
     transform: rotate(-180deg);
   }
-  header .header_middle .menus li.has_submenu svg {
-    position: absolute;
-    right: 25px;
-    top: 26px;
-  }
   header .header_middle .menus li.has_submenu {
     padding: 0;
     border-bottom: none;
@@ -3024,6 +3023,10 @@ textarea:focus) span {
     position: absolute;
     right: 0;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 25px 0 0;
   }
   header .header_middle .menus li:hover {
     -webkit-text-stroke: 0;
@@ -3045,7 +3048,8 @@ textarea:focus) span {
   header .header_right .search_wrap,
   header .header_right .hamburger,
   header .header_right .tel_mobile {
-    display: block;
+    display: flex;
+    flex: 0 0 auto;
     cursor: pointer;
   }
   header .header_right .to_tel {
@@ -3712,6 +3716,11 @@ textarea:focus) span {
   }
   header .header_right .hamburger,
   header .header_right .tel_mobile {
+    width: 33px;
+    height: 33px;
+  }
+  header .header_right .hamburger svg,
+  header .header_right .tel_mobile svg {
     width: 33px;
     height: 33px;
   }

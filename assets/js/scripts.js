@@ -359,12 +359,10 @@ $(document).ready(function () {
 		});
 		Fancybox.bind("[data-fancybox]", {});
 	}
-	console.log(screen.width)
-	if (screen.width < 992) {
-		$(".has_submenu .menu_right").click(function () {
-			$(this).parent().toggleClass("active");
-			$(this).parent().siblings().removeClass("active");
-			$(this).parent().siblings().find('li').removeClass("active");
-		});
-	}
+	
+	$(".has_submenu .menu_right").click(function () {
+		$(this).parent().toggleClass("active");
+		$(this).parent().siblings().removeClass("active");
+		$(this).parent().siblings().find('li').removeClass("active");
+	});
 });

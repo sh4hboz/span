@@ -502,6 +502,9 @@ header .header_right .hamburger {
   text-align: center;
   margin-bottom: 40px;
 }
+.question .question_block {
+  margin: 0 120px;
+}
 .question .question_block > .question_input {
   display: flex;
   gap: 24px;
@@ -1371,6 +1374,7 @@ footer .social_title {
           user-select: none;
   border: 0.5px solid transparent;
   transition: all ease-in-out 0.2s;
+  display: flex;
 }
 .card_product .swiper_img:hover {
   border: 0.5px solid rgb(12, 26, 55);
@@ -2939,7 +2943,7 @@ textarea:focus) span {
   }
   header .header_middle .menus li.has_submenu img {
     position: absolute;
-    right: 16px;
+    right: 25px;
     top: 26px;
   }
   header .header_middle .menus li.has_submenu {
@@ -3027,6 +3031,8 @@ textarea:focus) span {
     height: 44px;
     border-radius: 8px;
     padding: 12px 20px 12px 43px;
+    font-size: 12px;
+    line-height: 16px;
   }
   header .search_wrap img {
     left: 15px;
@@ -3348,6 +3354,9 @@ textarea:focus) span {
   }
   .contacts .contacts_row .contact_item a i {
     margin: 3px 0 0 0;
+  }
+  .question .question_block {
+    margin: 0;
   }
 }
 @media (max-width: 767px) {
@@ -4379,7 +4388,7 @@ textarea:focus) span {
     display: none;
   }
   .news_single {
-    padding: 26px 0;
+    padding: 26px 0 40px 0;
   }
   .news_single .section_title {
     font-size: 22px;
@@ -4426,7 +4435,7 @@ textarea:focus) span {
     margin: 5px 0 0 0;
   }
   .other_news {
-    padding: 0 0 26px 0;
+    padding: 0 0 40px 0;
   }
   .contacts {
     padding: 26px 0;

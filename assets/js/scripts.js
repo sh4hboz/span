@@ -261,6 +261,7 @@ $(document).ready(function () {
 				clickable: true,
 			},
 		});
+		Fancybox.bind("[data-fancybox]", {});
 	}
 
 	$(".filter_title").click(function () {

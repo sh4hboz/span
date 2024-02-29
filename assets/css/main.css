@@ -1526,8 +1526,8 @@ footer .social_title {
 }
 
 .fancybox__backdrop {
-  background: rgb(12, 26, 55);
-  opacity: 0.5;
+  background: #FFF;
+  opacity: 1;
 }
 
 #company_body {

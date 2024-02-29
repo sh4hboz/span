@@ -362,8 +362,9 @@ $(document).ready(function () {
 	console.log(screen.width)
 	if (screen.width < 992) {
 		$(".has_submenu .menu_right").click(function () {
-			$(this).parent().parent().find("li").removeClass("active");
 			$(this).parent().toggleClass("active");
+			$(this).parent().siblings().removeClass("active");
+			$(this).parent().siblings().find('li').removeClass("active");
 		});
 	}
 });

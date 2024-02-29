@@ -180,7 +180,7 @@ header .header_right .hamburger {
 }
 
 .hero {
-  padding: 345px 0 308px 0;
+  padding: 178px 0 178px 0;
   position: relative;
   z-index: 1;
 }
@@ -1539,7 +1539,8 @@ footer .social_title {
   background-image: url(../images/company_hero_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 366px 0;
+  padding: 216px 0;
+  margin-bottom: 20px;
 }
 .company_hero .company_hero_title {
   color: rgb(12, 26, 55);
@@ -2147,7 +2148,7 @@ main.index section {
 }
 main.index section:first-child {
   margin-top: 0;
-  padding-top: 130px;
+  padding-top: 30px;
 }
 
 .swiper_offer_nav i {
@@ -2385,7 +2386,7 @@ textarea:focus) span {
     width: 200px;
   }
   .company_hero {
-    padding: 250px 0;
+    padding: 190px 0;
   }
   .img_item {
     flex: 0 0 auto;
@@ -2553,10 +2554,10 @@ textarea:focus) span {
     font-size: 19px;
   }
   .hero {
-    padding: 300px 0 260px 0;
+    padding: 150px 0;
   }
   main.index section:first-child {
-    padding-top: 100px;
+    padding-top: 20px;
   }
   main.index section {
     margin-top: 100px;
@@ -2677,6 +2678,11 @@ textarea:focus) span {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .company_hero .company_hero_title {
+    font-size: 32px;
+    line-height: 44px;
+    max-width: 520px;
+  }
   #company_question.question {
     margin-bottom: 60px;
   }
@@ -2769,7 +2775,7 @@ textarea:focus) span {
     line-height: 22px;
   }
   .company_hero {
-    padding: 160px 0;
+    padding: 130px 0;
   }
   .card_tab .char_item {
     padding: 10px 0;
@@ -2929,7 +2935,7 @@ textarea:focus) span {
     height: auto;
     padding: 0;
     gap: 0;
-    background-color: #E7EEF2;
+    background-color: #e7eef2;
   }
   header .header_middle .menus li.has_submenu.active .submenu li.active .inner_submenu {
     position: relative;
@@ -3070,7 +3076,7 @@ textarea:focus) span {
     width: calc(33% - 14px);
   }
   .hero {
-    padding: 250px 0 200px 0;
+    padding: 120px 0;
   }
   .hero .next svg,
   .hero .prev svg {
@@ -3386,7 +3392,7 @@ textarea:focus) span {
 }
 @media (max-width: 767px) {
   .hero {
-    padding: 150px 0;
+    padding: 100px 0;
   }
   .partner .partner_prev,
   .partner .partner_next {
@@ -3854,11 +3860,12 @@ textarea:focus) span {
     margin-bottom: -5px;
   }
   .hero {
-    padding: 42px 0 69px 0;
+    padding: 42px 0 50px 0;
   }
   .company_hero {
-    padding: 70px 0;
+    padding: 60px 0;
     background-size: 100%;
+    background-image: url(../images/company_mobile_hero_bg.png);
   }
   .company_margin {
     margin-bottom: 35px;

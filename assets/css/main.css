@@ -1411,6 +1411,9 @@ footer .social_title {
   left: 35px;
   cursor: pointer;
 }
+.card_product .card_img {
+  display: flex;
+}
 
 .card_tab {
   padding-bottom: 100px;

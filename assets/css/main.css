@@ -3358,6 +3358,9 @@ textarea:focus) span {
   .question .question_block {
     margin: 0;
   }
+  header .header_middle .menus li.has_submenu::before {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .hero {

@@ -2951,7 +2951,7 @@ textarea:focus) span {
   header .header_middle .menus li.has_submenu.active .submenu li.active a {
     margin: 0 0 0 25px;
   }
-  header .header_middle .menus li.has_submenu.active .submenu li.active img {
+  header .header_middle .menus li.has_submenu.active .submenu li.active svg {
     transform: rotate(-90deg);
   }
   header .header_middle .menus li.has_submenu.active svg {
@@ -2990,7 +2990,7 @@ textarea:focus) span {
             user-select: none;
     transition: 0s padding;
   }
-  header .header_middle .menus li.has_submenu .submenu li img {
+  header .header_middle .menus li.has_submenu .submenu li svg {
     transform: rotate(90deg);
   }
   header .header_middle .menus li.has_submenu .submenu li:hover {

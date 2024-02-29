@@ -515,6 +515,7 @@ header .header_right .hamburger {
 .question .question_block > textarea {
   width: 100%;
   padding: 23px 31px;
+  font-family: "OpenSans", sans-serif;
   font-size: 22px;
   outline: none;
   border-radius: 10px;
@@ -539,6 +540,7 @@ header .header_right .hamburger {
 .question .orginal_input {
   width: 100%;
   padding: 23px 31px;
+  font-family: "OpenSans", sans-serif;
   font-size: 22px;
   outline: none;
   border-radius: 10px;
@@ -1521,6 +1523,11 @@ footer .social_title {
 }
 .card_tab .pdf_name:hover {
   color: #007ac0;
+}
+
+.fancybox__backdrop {
+  background: rgb(12, 26, 55);
+  opacity: 0.5;
 }
 
 #company_body {
@@ -2920,8 +2927,8 @@ textarea:focus) span {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
-    padding: 17px 0 0 0;
-    gap: 19px;
+    padding: 0;
+    gap: 0;
     background-color: #E7EEF2;
   }
   header .header_middle .menus li.has_submenu.active .submenu li.active .inner_submenu {
@@ -2966,10 +2973,11 @@ textarea:focus) span {
     -moz-user-select: none;
     user-select: none;
     transform: none;
+    min-width: 395px;
   }
   header .header_middle .menus li.has_submenu .submenu li {
     height: 58px;
-    padding: 8px 25px 8px 25px;
+    padding: 0 0 0 25px;
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
@@ -2987,10 +2995,22 @@ textarea:focus) span {
   header .header_middle .menus li.has_submenu .submenu li .inner_submenu {
     width: 100%;
   }
-  header .header_middle .menus li.has_submenu span {
+  header .header_middle .menus li.has_submenu .submenu li .menu_left {
+    margin: 0;
+  }
+  header .header_middle .menus li.has_submenu .menu_left {
+    display: flex;
+    height: 100%;
+    align-items: center;
     margin: 0 0 0 16px;
-    width: 100%;
     padding: 18px 0;
+  }
+  header .header_middle .menus li.has_submenu .menu_right {
+    width: 20%;
+    height: 58px;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   header .header_middle .menus li:hover {
     -webkit-text-stroke: 0;
@@ -4393,7 +4413,7 @@ textarea:focus) span {
     display: none;
   }
   .news_single {
-    padding: 26px 0 40px 0;
+    padding: 26px 0 60px 0;
   }
   .news_single .section_title {
     font-size: 22px;
@@ -4440,7 +4460,7 @@ textarea:focus) span {
     margin: 5px 0 0 0;
   }
   .other_news {
-    padding: 0 0 40px 0;
+    padding: 0 0 60px 0;
   }
   .contacts {
     padding: 26px 0;

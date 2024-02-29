@@ -361,13 +361,9 @@ $(document).ready(function () {
 	}
 	console.log(screen.width)
 	if (screen.width < 992) {
-		$(".has_submenu span, .has_submenu img").click(function () {
+		$(".has_submenu .menu_right").click(function () {
 			$(this).parent().toggleClass("active");
 			$(this).parent().find("li").removeClass("active");
-		});
-		$(".has_submenu .submenu > li").click(function () {
-			$(this).toggleClass("active");
-			$(this).siblings().removeClass("active");
 		});
 	}
 });

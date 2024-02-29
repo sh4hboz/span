@@ -2339,57 +2339,10 @@ textarea:focus) span {
   border-color: #fafafa;
 }
 
-@media (prefers-color-scheme: dark) {
-  header {
-    background-color: #0c1a37;
-  }
-  header svg path {
-    fill: #FFFFFF;
-  }
-  header svg g path {
-    stroke: #FFFFFF;
-  }
-  header svg rect {
-    stroke: #FFFFFF;
-  }
+:root {
+  color-scheme: only light;
 }
-@media (prefers-color-scheme: dark) and (max-width: 576px) {
-  header .header_middle .menus {
-    border-top: 1px solid #FFF !important;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  header .header_middle .menus,
-  header .header_middle .menus .close_menu :hover,
-  header .header_middle .menus li.has_submenu .submenu,
-  header .header_middle .menus li.has_submenu .inner_submenu,
-  header .header_middle .menus li.has_submenu.active .submenu li.active,
-  header .header_middle .menus li.has_submenu.active {
-    background-color: #0c1a37 !important;
-  }
-  header .header_middle .menus li.has_submenu.active .submenu li.active {
-    color: #FFFFFF;
-  }
-  header .header_middle .menus a {
-    color: #FFFFFF;
-  }
-  header .header_middle .menus li:hover:not(:first-child) {
-    border-top: 1px solid rgb(184, 206, 219) !important;
-  }
-  header .header_middle .menus li.has_submenu:hover li {
-    border-top: none !important;
-  }
-  header .blue_button a {
-    color: rgb(12, 26, 55);
-    border: 2px solid rgb(12, 26, 55);
-    background-color: #fff;
-  }
-  header .blue_button a:hover {
-    background-color: #0c1a37;
-    color: #FFFFFF;
-    border-color: #FFF;
-  }
-}
+
 .container {
   width: 100%;
   margin: 0 auto;

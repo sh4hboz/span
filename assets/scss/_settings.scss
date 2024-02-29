@@ -284,6 +284,11 @@ main.index section {
 	header svg rect{
 		stroke: #FFFFFF;
 	}
+	@media (max-width: 576px){
+		header .header_middle .menus{
+			border-top: 1px solid #FFF !important;
+		}
+	}
 	header .header_middle .menus,
 	header .header_middle .menus .close_menu :hover,
 	header .header_middle .menus li.has_submenu .submenu,

@@ -2352,6 +2352,13 @@ textarea:focus) span {
   header svg rect {
     stroke: #FFFFFF;
   }
+}
+@media (prefers-color-scheme: dark) and (max-width: 576px) {
+  header .header_middle .menus {
+    border-top: 1px solid #FFF !important;
+  }
+}
+@media (prefers-color-scheme: dark) {
   header .header_middle .menus,
   header .header_middle .menus .close_menu :hover,
   header .header_middle .menus li.has_submenu .submenu,

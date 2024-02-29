@@ -210,6 +210,13 @@ header {
 		align-items: stretch;
 		.swiper-slide {
 			height: auto;
+			opacity: 0;
+			visibility: hidden;
+			transition: .3s opacity ease;
+			&.swiper-slide-active{
+				opacity: 1;
+				visibility: visible;
+			}
 			.container {
 				height: 100%;
 			}
@@ -268,10 +275,6 @@ header {
 	.swiper-button-disabled,
 	.swiper-button-disabled {
 		cursor: auto;
-	}
-	.swiper-slide-next,
-	.swiper-slide-prev {
-		opacity: 0;
 	}
 }
 .hero::after {

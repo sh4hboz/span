@@ -206,6 +206,13 @@ header .header_right .hamburger {
 }
 .hero .swiper-wrapper .swiper-slide {
   height: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s opacity ease;
+}
+.hero .swiper-wrapper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+  visibility: visible;
 }
 .hero .swiper-wrapper .swiper-slide .container {
   height: 100%;
@@ -263,10 +270,6 @@ header .header_right .hamburger {
 .hero .swiper-button-disabled,
 .hero .swiper-button-disabled {
   cursor: auto;
-}
-.hero .swiper-slide-next,
-.hero .swiper-slide-prev {
-  opacity: 0;
 }
 
 .hero::after {
@@ -2869,7 +2872,7 @@ textarea:focus) span {
   header .header_middle .menus {
     position: fixed;
     flex-direction: column;
-    right: -100%;
+    right: -200%;
     left: auto;
     top: 106px;
     gap: 0;
@@ -3701,13 +3704,13 @@ textarea:focus) span {
   }
   header .header_middle .menus {
     top: 72px;
-    min-width: 375px;
-    max-width: 375px;
+    min-width: 100%;
+    max-width: 100%;
     border-radius: 0;
   }
   header .header_middle .menus li.has_submenu .submenu {
-    min-width: 375px;
-    max-width: 375px;
+    min-width: 100%;
+    max-width: 100%;
   }
   .other_news #title {
     margin-bottom: 13px;

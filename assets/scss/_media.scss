@@ -568,7 +568,7 @@
 			.menus {
 				position: fixed;
 				flex-direction: column;
-				right: -100%;
+				right: -200%;
 				left: auto;
 				top: 106px;
 				gap: 0;
@@ -1430,13 +1430,13 @@
 		.header_middle {
 			.menus {
 				top: 72px;
-				min-width: 375px;
-				max-width: 375px;
+				min-width: 100%;
+				max-width: 100%;
 				border-radius: 0;
 				li.has_submenu {
 					.submenu {
-						min-width: 375px;
-						max-width: 375px;
+						min-width: 100%;
+						max-width: 100%;
 					}
 				}
 			}

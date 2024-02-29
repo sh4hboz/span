@@ -358,6 +358,7 @@ $(document).ready(function () {
 		});
 		Fancybox.bind("[data-fancybox]", {});
 	}
+	console.log(screen.width)
 	if (screen.width < 992) {
 		$(".has_submenu span, .has_submenu img").click(function () {
 			$(this).parent().toggleClass("active");

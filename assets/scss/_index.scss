@@ -103,11 +103,6 @@ header {
 					background-color: rgb(141, 161, 178);
 				}
 			}
-			li.has_submenu .submenu li:first-child {
-				&::after{
-					display: none;
-				}
-			}
 			li.has_submenu .submenu li:hover {
 				background: rgb(184, 206, 219);
 			}

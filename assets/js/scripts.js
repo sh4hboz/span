@@ -56,7 +56,7 @@ $(document).ready(function () {
 		});
 	}
 
-	$(".hamburger , .close_menu svg").click(function () {
+	$(".hamburger , .close_menu p").click(function () {
 		$(".menus").toggleClass("active");
 		$(".has_submenu, .has_submenu li ").removeClass("active");
 	});

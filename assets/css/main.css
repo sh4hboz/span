@@ -3074,6 +3074,10 @@ textarea:focus) span {
   header .header_middle .menus .close_menu :hover {
     background: rgb(250, 250, 250);
   }
+  header .header_middle .menus .close_menu div {
+    display: flex;
+    padding: 9px;
+  }
   .catalog#catalog_page .swiper_item {
     width: calc(33% - 14px);
   }

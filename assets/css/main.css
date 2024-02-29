@@ -10,7 +10,7 @@ header .header_row {
   justify-content: space-between;
   gap: 116px;
 }
-header .header_row .brand_logo img {
+header .header_row .brand_logo svg {
   width: 182px;
   height: 49px;
 }
@@ -2348,7 +2348,7 @@ textarea:focus) span {
   header .header_row {
     gap: 60px;
   }
-  header .header_row .brand_logo img {
+  header .header_row .brand_logo svg {
     width: 171px;
     height: 30px;
   }
@@ -2535,7 +2535,7 @@ textarea:focus) span {
     gap: 40px;
     padding: 20px 0;
   }
-  header .header_row .brand_logo img {
+  header .header_row .brand_logo svg {
     width: 120px;
   }
   header .header_middle .menus {
@@ -3681,7 +3681,7 @@ textarea:focus) span {
     gap: 12px;
     padding: 19.5px 0;
   }
-  header .header_row .brand_logo img {
+  header .header_row .brand_logo svg {
     width: 101px;
     height: 27px;
   }

@@ -721,14 +721,14 @@ footer .social_title {
 }
 .modal_back .modal {
   position: absolute;
-  padding: 70px;
+  padding: 30px 70px;
   max-width: 936px;
   width: 100%;
   height: 0;
   max-height: calc(100svh - 40px);
   display: flex;
   align-items: flex-start;
-  gap: 50px;
+  gap: 30px;
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0px 10px 30px 0px rgba(32, 67, 135, 0.1);
@@ -736,7 +736,6 @@ footer .social_title {
   z-index: 2;
   visibility: hidden;
   opacity: 0;
-  overflow: auto;
 }
 .modal_back .modal.modal2 .modal_title {
   text-align: center;
@@ -823,7 +822,7 @@ footer .social_title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 50px;
+  gap: 30px;
 }
 .modal .form_actions .blue_button {
   width: 100%;
@@ -4325,6 +4324,7 @@ textarea:focus) span {
     font-size: 11px;
     line-height: 15px;
     padding: 10px 16px 10px 16px;
+    border-radius: 7px;
   }
   .for_placeholder span {
     font-size: 11px;
